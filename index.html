@@ -26,15 +26,62 @@
     main {
       max-width: 860px;
       margin: 0 auto;
-      padding: 32px 16px 56px;
+      padding: 24px 16px 56px;
+    }
+    .language-panel {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      margin-bottom: 16px;
+      padding: 12px;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.96);
+      box-shadow: 0 8px 24px rgba(31, 41, 51, 0.08);
+      backdrop-filter: blur(8px);
+    }
+    .language-label {
+      margin: 0 0 8px;
+      color: var(--muted);
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+    .language-switcher {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .language-switcher button {
+      min-height: 40px;
+      padding: 8px 12px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: #fff;
+      color: var(--text);
+      font: inherit;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .language-switcher button:hover,
+    .language-switcher button:focus-visible {
+      border-color: var(--brand);
+      outline: 3px solid rgba(139, 111, 61, 0.18);
+      outline-offset: 2px;
+    }
+    .language-switcher button[aria-pressed="true"] {
+      border-color: var(--brand);
+      background: var(--brand);
+      color: #fff;
     }
     article {
+      margin-bottom: 24px;
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: 18px;
       padding: 28px;
       box-shadow: 0 12px 30px rgba(31, 41, 51, 0.08);
     }
+    .js .policy[hidden] { display: none; }
     h1 {
       margin: 0 0 8px;
       color: var(--brand);
@@ -47,7 +94,6 @@
       font-size: 1.25rem;
     }
     p, li { color: var(--text); }
-    .muted { color: var(--muted); }
     .date {
       display: inline-block;
       margin: 8px 0 18px;
@@ -57,72 +103,255 @@
       color: var(--brand);
       font-weight: 600;
     }
-    ul { padding-left: 22px; }
-    a { color: var(--brand); }
+    a { color: var(--brand); overflow-wrap: anywhere; }
+    @media (max-width: 560px) {
+      main { padding: 12px 10px 40px; }
+      article { padding: 22px 18px; }
+      .language-panel { top: 6px; }
+      .language-switcher { flex-wrap: nowrap; overflow-x: auto; padding-bottom: 4px; }
+      .language-switcher button { flex: 0 0 auto; }
+    }
   </style>
+  <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
   <main>
-    <article>
+    <nav class="language-panel" aria-label="Language selection">
+      <p class="language-label">Dil / Language</p>
+      <div class="language-switcher">
+        <button type="button" data-lang="tr" aria-controls="policy-tr" aria-pressed="true">Türkçe</button>
+        <button type="button" data-lang="en" aria-controls="policy-en" aria-pressed="false">English</button>
+        <button type="button" data-lang="de" aria-controls="policy-de" aria-pressed="false">Deutsch</button>
+        <button type="button" data-lang="es" aria-controls="policy-es" aria-pressed="false">Español</button>
+        <button type="button" data-lang="zh" aria-controls="policy-zh" aria-pressed="false">中文</button>
+        <button type="button" data-lang="ja" aria-controls="policy-ja" aria-pressed="false">日本語</button>
+        <button type="button" data-lang="ru" aria-controls="policy-ru" aria-pressed="false">Русский</button>
+      </div>
+    </nav>
+
+    <article id="policy-tr" class="policy" lang="tr" data-title="Ayet Kartları - Gizlilik Politikası">
       <h1>Ayet Kartları - Gizlilik Politikası</h1>
       <p class="date">Son güncelleme: 23 Temmuz 2026</p>
-
-      <p>
-        Bu gizlilik politikası, <strong>Ayet Kartları</strong> mobil uygulamasının kullanıcı verileriyle ilgili yaklaşımını açıklar. Uygulama, kullanıcıların ayet kartlarını okuyabilmesi, kartlar arasında geçiş yapabilmesi ve manevi içerikleri sade bir arayüzle görüntüleyebilmesi amacıyla geliştirilmiştir.
-      </p>
-
+      <p>Bu gizlilik politikası, <strong>Ayet Kartları</strong> mobil uygulamasının kullanıcı verileriyle ilgili yaklaşımını açıklar. Uygulama, kullanıcıların ayet kartlarını okuyabilmesi, kartlar arasında geçiş yapabilmesi ve manevi içerikleri sade bir arayüzle görüntüleyebilmesi amacıyla geliştirilmiştir.</p>
       <h2>Toplanan kişisel bilgiler</h2>
-      <p>
-        Ayet Kartları uygulaması kullanıcıdan ad, soyad, telefon numarası, e-posta adresi, konum bilgisi veya benzeri doğrudan kişisel bilgiler talep etmez.
-      </p>
-
+      <p>Ayet Kartları uygulaması kullanıcıdan ad, soyad, telefon numarası, e-posta adresi, konum bilgisi veya benzeri doğrudan kişisel bilgiler talep etmez.</p>
       <h2>Hesap ve üyelik</h2>
-      <p>
-        Uygulamada kullanıcı hesabı, üyelik, giriş sistemi veya profil oluşturma özelliği bulunmaz.
-      </p>
-
+      <p>Uygulamada kullanıcı hesabı, üyelik, giriş sistemi veya profil oluşturma özelliği bulunmaz.</p>
       <h2>Cihazda saklanan bilgiler</h2>
-      <p>
-        Uygulama ayarları, okuma tercihleri veya benzeri kullanım bilgileri yalnızca kullanıcının cihazında saklanabilir. Bu bilgiler geliştirici tarafından dışarı aktarılmaz ve kişisel kimlik bilgisiyle ilişkilendirilmez.
-      </p>
-
+      <p>Uygulama ayarları, okuma tercihleri veya benzeri kullanım bilgileri yalnızca kullanıcının cihazında saklanabilir. Bu bilgiler geliştirici tarafından dışarı aktarılmaz ve kişisel kimlik bilgisiyle ilişkilendirilmez.</p>
       <h2>Reklam ve üçüncü taraf hizmetler</h2>
-      <p>
-        Uygulamada reklam hizmetleri Google AdMob tarafından sağlanabilir. Bu durumda Google; reklamların gösterilmesi, performans ölçümü, sahtekârlığın önlenmesi ve hizmetin güvenli şekilde çalışması amacıyla bazı cihaz ve kullanım verilerini işleyebilir.
-      </p>
-      <p>
-        Google'ın veri işleme ve gizlilik politikaları hakkında detaylı bilgi için şu sayfa incelenebilir:<br />
-        <a href="https://policies.google.com/privacy" rel="noopener noreferrer">https://policies.google.com/privacy</a>
-      </p>
-
+      <p>Uygulamada reklam hizmetleri Google AdMob tarafından sağlanabilir. Bu durumda Google; reklamların gösterilmesi, performans ölçümü, sahtekârlığın önlenmesi ve hizmetin güvenli şekilde çalışması amacıyla bazı cihaz ve kullanım verilerini işleyebilir.</p>
+      <p>Google'ın veri işleme ve gizlilik politikaları hakkında detaylı bilgi için şu sayfa incelenebilir:<br /><a href="https://policies.google.com/privacy" rel="noopener noreferrer">https://policies.google.com/privacy</a></p>
       <h2>Uygulama içi satın alma</h2>
-      <p>
-        Uygulama, kullanıcıların uygulamanın geliştirme ve bakım sürecine gönüllü olarak destek olabilmesi için Google Play üzerinden uygulama içi satın alma seçenekleri sunabilir. Bu destek herhangi bir ek özellik, içerik veya ayrıcalık sağlamaz.
-      </p>
-      <p>
-        Satın alma işlemleri tamamen <strong>Google Play'in kendi ödeme altyapısı (Google Play Billing)</strong> üzerinden gerçekleştirilir. Kredi kartı, banka bilgisi veya ödeme yöntemlerinize ait hassas bilgiler bizim tarafımızdan görülmez, işlenmez veya saklanmaz; bu bilgiler Google Play tarafından yönetilir.
-      </p>
-
+      <p>Uygulama, kullanıcıların uygulamanın geliştirme ve bakım sürecine gönüllü olarak destek olabilmesi için Google Play üzerinden uygulama içi satın alma seçenekleri sunabilir. Bu destek herhangi bir ek özellik, içerik veya ayrıcalık sağlamaz.</p>
+      <p>Satın alma işlemleri tamamen <strong>Google Play'in kendi ödeme altyapısı (Google Play Billing)</strong> üzerinden gerçekleştirilir. Kredi kartı, banka bilgisi veya ödeme yöntemlerinize ait hassas bilgiler bizim tarafımızdan görülmez, işlenmez veya saklanmaz; bu bilgiler Google Play tarafından yönetilir.</p>
       <h2>Veri paylaşımı</h2>
-      <p>
-        Uygulama, kullanıcıya ait kişisel verileri üçüncü taraflarla satmaz, kiralamaz veya paylaşmaz. Reklam ve ödeme altyapısı kullanılması halinde ilgili veri işleme süreçleri Google'ın kendi gizlilik politikalarına ve hizmet şartlarına tabidir.
-      </p>
-
+      <p>Uygulama, kullanıcıya ait kişisel verileri üçüncü taraflarla satmaz, kiralamaz veya paylaşmaz. Reklam ve ödeme altyapısı kullanılması halinde ilgili veri işleme süreçleri Google'ın kendi gizlilik politikalarına ve hizmet şartlarına tabidir.</p>
       <h2>Çocukların gizliliği</h2>
-      <p>
-        Uygulama özellikle çocuklardan kişisel bilgi toplamaya yönelik değildir. Uygulama, kullanıcıdan doğrudan kişisel bilgi talep etmez.
-      </p>
-
+      <p>Uygulama özellikle çocuklardan kişisel bilgi toplamaya yönelik değildir. Uygulama, kullanıcıdan doğrudan kişisel bilgi talep etmez.</p>
       <h2>Değişiklikler</h2>
-      <p>
-        Bu gizlilik politikası gerektiğinde güncellenebilir. Güncel metin her zaman bu sayfada yayımlanır.
-      </p>
-
+      <p>Bu gizlilik politikası gerektiğinde güncellenebilir. Güncel metin her zaman bu sayfada yayımlanır.</p>
       <h2>İletişim</h2>
-      <p>
-        Gizlilik politikasıyla ilgili sorular için geliştiriciye Google Play mağaza kaydında belirtilen iletişim bilgileri üzerinden ulaşılabilir.
-      </p>
+      <p>Gizlilik politikasıyla ilgili sorular için geliştiriciye Google Play mağaza kaydında belirtilen iletişim bilgileri üzerinden ulaşılabilir.</p>
+    </article>
+
+    <article id="policy-en" class="policy" lang="en" data-title="Ayet Kartları - Privacy Policy">
+      <h1>Ayet Kartları - Privacy Policy</h1>
+      <p class="date">Last updated: July 23, 2026</p>
+      <p>This privacy policy explains how the <strong>Ayet Kartları</strong> mobile application approaches user data. The application was developed to allow users to read verse cards, move between cards, and view spiritual content through a simple interface.</p>
+      <h2>Personal information collected</h2>
+      <p>The Ayet Kartları application does not request users' first name, last name, telephone number, email address, location information, or similar directly identifying personal information.</p>
+      <h2>Account and membership</h2>
+      <p>The application does not include user accounts, membership, a login system, or profile creation.</p>
+      <h2>Information stored on the device</h2>
+      <p>Application settings, reading preferences, or similar usage information may be stored only on the user's device. This information is not transferred externally by the developer and is not linked to personally identifying information.</p>
+      <h2>Advertising and third-party services</h2>
+      <p>Advertising services in the application may be provided by Google AdMob. In this case, Google may process certain device and usage data to display advertisements, measure performance, prevent fraud, and ensure the secure operation of the service.</p>
+      <p>For detailed information about Google's data processing and privacy policies, please visit:<br /><a href="https://policies.google.com/privacy" rel="noopener noreferrer">https://policies.google.com/privacy</a></p>
+      <h2>In-app purchases</h2>
+      <p>The application may offer in-app purchase options through Google Play so that users can voluntarily support its development and maintenance. This support does not provide any additional features, content, or privileges.</p>
+      <p>Purchases are processed entirely through <strong>Google Play's own payment infrastructure (Google Play Billing)</strong>. We do not see, process, or store sensitive information relating to your credit card, banking details, or payment methods; this information is managed by Google Play.</p>
+      <h2>Data sharing</h2>
+      <p>The application does not sell, rent, or share users' personal data with third parties. Where advertising and payment infrastructure is used, the relevant data processing is subject to Google's own privacy policies and terms of service.</p>
+      <h2>Children's privacy</h2>
+      <p>The application is not specifically intended to collect personal information from children. The application does not directly request personal information from users.</p>
+      <h2>Changes</h2>
+      <p>This privacy policy may be updated when necessary. The current text will always be published on this page.</p>
+      <h2>Contact</h2>
+      <p>For questions about this privacy policy, the developer can be contacted using the contact information provided in the Google Play store listing.</p>
+    </article>
+
+    <article id="policy-de" class="policy" lang="de" data-title="Ayet Kartları - Datenschutzerklärung">
+      <h1>Ayet Kartları - Datenschutzerklärung</h1>
+      <p class="date">Letzte Aktualisierung: 23. Juli 2026</p>
+      <p>Diese Datenschutzerklärung erläutert den Umgang der mobilen Anwendung <strong>Ayet Kartları</strong> mit Nutzerdaten. Die Anwendung wurde entwickelt, damit Nutzer Verskarten lesen, zwischen den Karten wechseln und spirituelle Inhalte über eine einfache Benutzeroberfläche anzeigen können.</p>
+      <h2>Erhobene personenbezogene Daten</h2>
+      <p>Die Anwendung Ayet Kartları fordert Nutzer nicht zur Angabe von Vorname, Nachname, Telefonnummer, E-Mail-Adresse, Standortdaten oder ähnlichen unmittelbar personenbezogenen Daten auf.</p>
+      <h2>Konto und Mitgliedschaft</h2>
+      <p>Die Anwendung verfügt weder über Nutzerkonten oder Mitgliedschaften noch über ein Anmeldesystem oder eine Funktion zur Profilerstellung.</p>
+      <h2>Auf dem Gerät gespeicherte Informationen</h2>
+      <p>Anwendungseinstellungen, Lesepräferenzen oder ähnliche Nutzungsinformationen können ausschließlich auf dem Gerät des Nutzers gespeichert werden. Diese Informationen werden vom Entwickler nicht nach außen übertragen und nicht mit personenbezogenen Identifikationsdaten verknüpft.</p>
+      <h2>Werbung und Dienste Dritter</h2>
+      <p>Werbedienste in der Anwendung können von Google AdMob bereitgestellt werden. In diesem Fall kann Google bestimmte Geräte- und Nutzungsdaten verarbeiten, um Werbung anzuzeigen, die Leistung zu messen, Betrug zu verhindern und den sicheren Betrieb des Dienstes zu gewährleisten.</p>
+      <p>Ausführliche Informationen zur Datenverarbeitung und zu den Datenschutzrichtlinien von Google finden Sie unter:<br /><a href="https://policies.google.com/privacy" rel="noopener noreferrer">https://policies.google.com/privacy</a></p>
+      <h2>In-App-Käufe</h2>
+      <p>Die Anwendung kann über Google Play Optionen für In-App-Käufe anbieten, damit Nutzer die Entwicklung und Wartung der Anwendung freiwillig unterstützen können. Diese Unterstützung gewährt keine zusätzlichen Funktionen, Inhalte oder Privilegien.</p>
+      <p>Käufe werden vollständig über <strong>Googles eigene Zahlungsinfrastruktur (Google Play Billing)</strong> abgewickelt. Sensible Angaben zu Kreditkarten, Bankdaten oder Zahlungsmethoden werden von uns weder eingesehen noch verarbeitet oder gespeichert; diese Informationen werden von Google Play verwaltet.</p>
+      <h2>Datenweitergabe</h2>
+      <p>Die Anwendung verkauft, vermietet oder teilt personenbezogene Daten der Nutzer nicht mit Dritten. Werden Werbe- und Zahlungsdienste genutzt, unterliegen die entsprechenden Datenverarbeitungsvorgänge den Datenschutzrichtlinien und Nutzungsbedingungen von Google.</p>
+      <h2>Datenschutz von Kindern</h2>
+      <p>Die Anwendung ist nicht speziell darauf ausgerichtet, personenbezogene Daten von Kindern zu erheben. Die Anwendung fordert Nutzer nicht direkt zur Angabe personenbezogener Daten auf.</p>
+      <h2>Änderungen</h2>
+      <p>Diese Datenschutzerklärung kann bei Bedarf aktualisiert werden. Die jeweils aktuelle Fassung wird stets auf dieser Seite veröffentlicht.</p>
+      <h2>Kontakt</h2>
+      <p>Bei Fragen zu dieser Datenschutzerklärung kann der Entwickler über die im Google-Play-Store-Eintrag angegebenen Kontaktdaten erreicht werden.</p>
+    </article>
+
+    <article id="policy-es" class="policy" lang="es" data-title="Ayet Kartları - Política de privacidad">
+      <h1>Ayet Kartları - Política de privacidad</h1>
+      <p class="date">Última actualización: 23 de julio de 2026</p>
+      <p>Esta política de privacidad explica el enfoque de la aplicación móvil <strong>Ayet Kartları</strong> respecto de los datos de los usuarios. La aplicación se ha desarrollado para que los usuarios puedan leer tarjetas de versículos, desplazarse entre ellas y visualizar contenido espiritual mediante una interfaz sencilla.</p>
+      <h2>Información personal recopilada</h2>
+      <p>La aplicación Ayet Kartları no solicita a los usuarios su nombre, apellidos, número de teléfono, dirección de correo electrónico, información de ubicación ni otros datos personales similares que permitan identificarlos directamente.</p>
+      <h2>Cuenta y membresía</h2>
+      <p>La aplicación no dispone de cuentas de usuario, membresías, sistema de inicio de sesión ni función de creación de perfiles.</p>
+      <h2>Información almacenada en el dispositivo</h2>
+      <p>Los ajustes de la aplicación, las preferencias de lectura u otra información de uso similar pueden almacenarse únicamente en el dispositivo del usuario. El desarrollador no transfiere esta información al exterior ni la vincula con información de identificación personal.</p>
+      <h2>Publicidad y servicios de terceros</h2>
+      <p>Los servicios publicitarios de la aplicación pueden ser proporcionados por Google AdMob. En tal caso, Google puede procesar determinados datos del dispositivo y de uso para mostrar anuncios, medir el rendimiento, prevenir el fraude y garantizar el funcionamiento seguro del servicio.</p>
+      <p>Para obtener información detallada sobre el tratamiento de datos y las políticas de privacidad de Google, visite:<br /><a href="https://policies.google.com/privacy" rel="noopener noreferrer">https://policies.google.com/privacy</a></p>
+      <h2>Compras dentro de la aplicación</h2>
+      <p>La aplicación puede ofrecer opciones de compra dentro de la aplicación a través de Google Play para que los usuarios puedan apoyar voluntariamente su desarrollo y mantenimiento. Este apoyo no proporciona ninguna función, contenido o privilegio adicional.</p>
+      <p>Las compras se procesan íntegramente mediante <strong>la propia infraestructura de pagos de Google Play (Google Play Billing)</strong>. Nosotros no vemos, procesamos ni almacenamos información confidencial relacionada con su tarjeta de crédito, datos bancarios o métodos de pago; dicha información es gestionada por Google Play.</p>
+      <h2>Intercambio de datos</h2>
+      <p>La aplicación no vende, alquila ni comparte con terceros los datos personales de los usuarios. Cuando se utilizan servicios de publicidad y pagos, el tratamiento de datos correspondiente está sujeto a las políticas de privacidad y las condiciones de servicio de Google.</p>
+      <h2>Privacidad de los menores</h2>
+      <p>La aplicación no está destinada específicamente a recopilar información personal de menores. La aplicación no solicita directamente información personal a los usuarios.</p>
+      <h2>Cambios</h2>
+      <p>Esta política de privacidad puede actualizarse cuando sea necesario. El texto vigente se publicará siempre en esta página.</p>
+      <h2>Contacto</h2>
+      <p>Para preguntas sobre esta política de privacidad, puede ponerse en contacto con el desarrollador mediante la información de contacto indicada en la ficha de Google Play Store.</p>
+    </article>
+
+    <article id="policy-zh" class="policy" lang="zh-CN" data-title="Ayet Kartları - 隐私政策">
+      <h1>Ayet Kartları - 隐私政策</h1>
+      <p class="date">最后更新：2026年7月23日</p>
+      <p>本隐私政策说明 <strong>Ayet Kartları</strong> 移动应用对用户数据的处理方式。本应用旨在让用户阅读经文卡片、在卡片之间切换，并通过简洁的界面查看精神内容。</p>
+      <h2>收集的个人信息</h2>
+      <p>Ayet Kartları 应用不会要求用户提供姓名、电话号码、电子邮件地址、位置信息或其他类似的可直接识别个人身份的信息。</p>
+      <h2>账户与会员</h2>
+      <p>本应用不提供用户账户、会员、登录系统或个人资料创建功能。</p>
+      <h2>存储在设备上的信息</h2>
+      <p>应用设置、阅读偏好或类似的使用信息可能仅存储在用户的设备上。开发者不会将这些信息传输到设备之外，也不会将其与个人身份信息相关联。</p>
+      <h2>广告与第三方服务</h2>
+      <p>本应用中的广告服务可能由 Google AdMob 提供。在这种情况下，Google 可能会处理某些设备和使用数据，以展示广告、衡量效果、防止欺诈并确保服务安全运行。</p>
+      <p>如需详细了解 Google 的数据处理和隐私政策，请访问：<br /><a href="https://policies.google.com/privacy" rel="noopener noreferrer">https://policies.google.com/privacy</a></p>
+      <h2>应用内购买</h2>
+      <p>本应用可能通过 Google Play 提供应用内购买选项，让用户自愿支持应用的开发和维护。此类支持不会提供任何额外功能、内容或特权。</p>
+      <p>购买交易完全通过 <strong>Google Play 自有的支付基础设施（Google Play Billing）</strong>处理。我们不会查看、处理或存储与您的信用卡、银行信息或支付方式相关的敏感信息；这些信息由 Google Play 管理。</p>
+      <h2>数据共享</h2>
+      <p>本应用不会向第三方出售、出租或共享用户的个人数据。在使用广告和支付基础设施的情况下，相关数据处理须遵守 Google 自身的隐私政策和服务条款。</p>
+      <h2>儿童隐私</h2>
+      <p>本应用并非专门用于收集儿童的个人信息。本应用不会直接要求用户提供个人信息。</p>
+      <h2>变更</h2>
+      <p>本隐私政策可能会在必要时更新。最新文本将始终发布在本页面上。</p>
+      <h2>联系方式</h2>
+      <p>如对本隐私政策有任何疑问，可通过 Google Play 商店详情页中提供的联系信息与开发者联系。</p>
+    </article>
+
+    <article id="policy-ja" class="policy" lang="ja" data-title="Ayet Kartları - プライバシーポリシー">
+      <h1>Ayet Kartları - プライバシーポリシー</h1>
+      <p class="date">最終更新日：2026年7月23日</p>
+      <p>本プライバシーポリシーは、モバイルアプリ <strong>Ayet Kartları</strong> におけるユーザーデータの取り扱い方針を説明するものです。本アプリは、ユーザーが聖句カードを読み、カード間を移動し、シンプルなインターフェースで精神的なコンテンツを閲覧できるようにする目的で開発されました。</p>
+      <h2>収集する個人情報</h2>
+      <p>Ayet Kartları は、氏名、電話番号、メールアドレス、位置情報、またはこれらに類する個人を直接特定する情報をユーザーに求めません。</p>
+      <h2>アカウントおよび会員登録</h2>
+      <p>本アプリには、ユーザーアカウント、会員登録、ログインシステム、またはプロフィール作成機能はありません。</p>
+      <h2>端末に保存される情報</h2>
+      <p>アプリの設定、閲覧設定、またはこれらに類する利用情報は、ユーザーの端末にのみ保存される場合があります。これらの情報が開発者によって外部へ転送されることはなく、個人を特定する情報と関連付けられることもありません。</p>
+      <h2>広告および第三者サービス</h2>
+      <p>本アプリの広告サービスは、Google AdMob によって提供される場合があります。その場合、Google は、広告の表示、パフォーマンス測定、不正行為の防止、およびサービスの安全な運用を目的として、特定の端末データや利用データを処理することがあります。</p>
+      <p>Google のデータ処理およびプライバシーポリシーの詳細については、以下をご覧ください。<br /><a href="https://policies.google.com/privacy" rel="noopener noreferrer">https://policies.google.com/privacy</a></p>
+      <h2>アプリ内購入</h2>
+      <p>本アプリは、ユーザーがアプリの開発および保守を任意で支援できるよう、Google Play を通じてアプリ内購入の選択肢を提供する場合があります。この支援によって、追加の機能、コンテンツ、または特典が提供されることはありません。</p>
+      <p>購入はすべて、<strong>Google Play 独自の決済基盤（Google Play Billing）</strong>を通じて処理されます。クレジットカード、銀行情報、または支払方法に関する機密情報を当方が閲覧、処理、保存することはありません。これらの情報は Google Play によって管理されます。</p>
+      <h2>データの共有</h2>
+      <p>本アプリは、ユーザーの個人データを第三者に販売、貸与、または共有しません。広告および決済基盤を利用する場合、関連するデータ処理には Google のプライバシーポリシーおよび利用規約が適用されます。</p>
+      <h2>子どものプライバシー</h2>
+      <p>本アプリは、子どもから個人情報を収集することを特に目的としたものではありません。本アプリがユーザーに個人情報を直接求めることはありません。</p>
+      <h2>変更</h2>
+      <p>本プライバシーポリシーは、必要に応じて更新される場合があります。最新の内容は常に本ページに掲載されます。</p>
+      <h2>お問い合わせ</h2>
+      <p>本プライバシーポリシーに関するご質問は、Google Play ストアの掲載情報に記載された連絡先を通じて開発者にお問い合わせください。</p>
+    </article>
+
+    <article id="policy-ru" class="policy" lang="ru" data-title="Ayet Kartları — Политика конфиденциальности">
+      <h1>Ayet Kartları — Политика конфиденциальности</h1>
+      <p class="date">Последнее обновление: 23 июля 2026 г.</p>
+      <p>Настоящая политика конфиденциальности описывает подход мобильного приложения <strong>Ayet Kartları</strong> к пользовательским данным. Приложение разработано для того, чтобы пользователи могли читать карточки с аятами, переходить между карточками и просматривать духовные материалы в простом интерфейсе.</p>
+      <h2>Собираемая персональная информация</h2>
+      <p>Приложение Ayet Kartları не запрашивает у пользователей имя, фамилию, номер телефона, адрес электронной почты, данные о местоположении или аналогичную информацию, непосредственно идентифицирующую личность.</p>
+      <h2>Учётная запись и регистрация</h2>
+      <p>В приложении отсутствуют учётные записи пользователей, регистрация, система входа и функция создания профиля.</p>
+      <h2>Информация, хранящаяся на устройстве</h2>
+      <p>Настройки приложения, предпочтения чтения или аналогичная информация об использовании может храниться только на устройстве пользователя. Разработчик не передаёт эту информацию за пределы устройства и не связывает её с данными, идентифицирующими личность.</p>
+      <h2>Реклама и сторонние сервисы</h2>
+      <p>Рекламные услуги в приложении могут предоставляться Google AdMob. В этом случае Google может обрабатывать определённые данные об устройстве и использовании для показа рекламы, измерения эффективности, предотвращения мошенничества и обеспечения безопасной работы сервиса.</p>
+      <p>Подробную информацию об обработке данных и политике конфиденциальности Google можно найти на странице:<br /><a href="https://policies.google.com/privacy" rel="noopener noreferrer">https://policies.google.com/privacy</a></p>
+      <h2>Покупки в приложении</h2>
+      <p>Приложение может предлагать покупки через Google Play, чтобы пользователи могли добровольно поддержать разработку и обслуживание приложения. Такая поддержка не предоставляет дополнительных функций, материалов или привилегий.</p>
+      <p>Покупки полностью обрабатываются через <strong>собственную платёжную инфраструктуру Google Play (Google Play Billing)</strong>. Мы не видим, не обрабатываем и не храним конфиденциальную информацию о вашей банковской карте, банковских реквизитах или способах оплаты; этой информацией управляет Google Play.</p>
+      <h2>Передача данных</h2>
+      <p>Приложение не продаёт, не сдаёт в аренду и не передаёт третьим лицам персональные данные пользователей. При использовании рекламной и платёжной инфраструктуры соответствующая обработка данных регулируется собственной политикой конфиденциальности и условиями предоставления услуг Google.</p>
+      <h2>Конфиденциальность детей</h2>
+      <p>Приложение специально не предназначено для сбора персональной информации детей. Приложение не запрашивает персональную информацию непосредственно у пользователей.</p>
+      <h2>Изменения</h2>
+      <p>Настоящая политика конфиденциальности может обновляться при необходимости. Актуальная версия всегда публикуется на этой странице.</p>
+      <h2>Контакты</h2>
+      <p>По вопросам, связанным с настоящей политикой конфиденциальности, с разработчиком можно связаться по контактным данным, указанным на странице приложения в Google Play.</p>
     </article>
   </main>
+
+  <script>
+    (function () {
+      const supported = ['tr', 'en', 'de', 'es', 'zh', 'ja', 'ru'];
+      const articles = Array.from(document.querySelectorAll('.policy'));
+      const buttons = Array.from(document.querySelectorAll('[data-lang]'));
+
+      function languageFromHash() {
+        const value = window.location.hash.slice(1).toLowerCase();
+        return supported.includes(value) ? value : null;
+      }
+
+      function showLanguage(language, updateHash) {
+        const selected = supported.includes(language) ? language : 'tr';
+        articles.forEach(function (article) {
+          article.hidden = article.id !== 'policy-' + selected;
+        });
+        buttons.forEach(function (button) {
+          button.setAttribute('aria-pressed', String(button.dataset.lang === selected));
+        });
+        const activeArticle = document.getElementById('policy-' + selected);
+        document.documentElement.lang = activeArticle.lang;
+        document.title = activeArticle.dataset.title;
+        if (updateHash && window.location.hash !== '#' + selected) {
+          history.replaceState(null, '', '#' + selected);
+        }
+      }
+
+      buttons.forEach(function (button) {
+        button.addEventListener('click', function () {
+          showLanguage(button.dataset.lang, true);
+          document.getElementById('policy-' + button.dataset.lang).focus({ preventScroll: true });
+        });
+      });
+
+      articles.forEach(function (article) { article.tabIndex = -1; });
+      showLanguage(languageFromHash() || 'tr', false);
+      window.addEventListener('hashchange', function () {
+        showLanguage(languageFromHash() || 'tr', false);
+      });
+    }());
+  </script>
 </body>
 </html>
