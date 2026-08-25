@@ -156,9 +156,29 @@
       <h2>Cihazda saklanan bilgiler</h2>
       <p>Uygulama ayarları, okuma tercihleri veya benzeri kişisel tercihler kullanıcının cihazında saklanabilir. Ancak aşağıdaki Firebase Analytics bölümünde açıklanan teknik ve kullanım verileri, istatistik oluşturulması amacıyla Google’a iletilebilir.</p>
       <h2>Firebase Analytics ve kullanım istatistikleri</h2>
-      <p>Uygulama; kullanım istatistiklerini ölçmek, hangi özelliklerin kullanıldığını anlamak ve uygulamayı iyileştirmek amacıyla Google tarafından sağlanan Firebase Analytics hizmetini kullanır. Bu hizmet; uygulama içi etkileşimler, oturum bilgileri, yaklaşık konum, cihaz ve işletim sistemi bilgileri ile uygulama örneği kimliği veya reklam kimliği gibi tanımlayıcıları işleyebilir.</p>
-      <p>Bu veriler tarafımızca kullanıcının adı, e-posta adresi veya telefon numarası gibi doğrudan kimlik bilgileriyle ilişkilendirilmez. Firebase Analytics kapsamında gerçekleştirilen veri işleme Google’ın gizlilik politikası ve hizmet şartlarına tabidir.</p>
-      <h2>Reklam ve üçüncü taraf hizmetler</h2>
+      <p>Uygulama, kullanımı ölçmek, hangi özelliklerin kullanıldığını anlamak ve uygulamayı iyileştirmek için Google tarafından sağlanan Firebase Analytics'i kullanır.</p>
+      <h3>Şu anda otomatik olarak toplanıyor</h3>
+      <ul>
+        <li><strong>Cihaz bilgileri:</strong> Cihaz modeli, işletim sistemi ve sürümü, ekran çözünürlüğü ve dil veya bölgesel ayarlar.</li>
+        <li><strong>Uygulama bilgileri:</strong> Uygulama sürümü, ilk kurulum zamanı ve kurulum kaynağı.</li>
+        <li><strong>Kullanım metrikleri:</strong> Oturum sayısı, ortalama oturum süresi, günlük, haftalık ve aylık aktif kullanıcı sayıları ve uygulamanın belirli bir süre sonra tekrar açılıp açılmadığını gösteren tutma bilgileri.</li>
+        <li><strong>Yaklaşık coğrafi konum:</strong> IP adresinden türetilen ülke veya şehir düzeyinde konum. GPS veya kesin konum toplanmaz ve uygulama, kesin konum izni istemez.</li>
+        <li><strong>Reklam tanımlayıcı:</strong> Firebase Analytics, Google AdMob ile birlikte kullanıldığından Google Reklam Kimliği, reklam ve reklam kişiselleştirme amacıyla işlenebilir.</li>
+        <li><strong>Standart sistem etkinlikleri:</strong> İlk açılış (<code>first_open</code>), uygulama güncellemesi (<code>app_update</code>) ve uygulamanın kaldırılması (<code>app_remove</code>) gibi etkinlikler.</li>
+      </ul>
+      <h3>Planlanan Analytics etkinlikleri — şu anda etkin değil</h3>
+      <p>Aşağıdaki bilgiler şu anda Firebase Analytics'e gönderilmemektedir. Bu etkinlikler gelecekteki bir versiyona eklenebilir ve planlanan kapsamı önceden açıklamak için ayrı olarak listelenir:</p>
+      <ul>
+        <li><strong>Dil tercihi:</strong> Seçilen Kur'an çeviri dili ve menü dili.</li>
+        <li><strong>En çok okunan sure ve ayetler:</strong> Hangi sure ve ayetlerin daha sık okunduğuna ilişkin toplu kullanım istatistikleri; bunun amacı kişisel bir okuma profili oluşturmak değildir.</li>
+        <li><strong>Arama özelliğinin kullanımı:</strong> Arama özelliğinin ne sıklıkta ve ne şekilde kullanıldığı. Bu politika, toplama işlemi başlamadan önce güncellenmediği sürece arama metni dahil edilmez.</li>
+        <li><strong>Okuma ilerlemesi ve tamamlanma oranı:</strong> Cihazda halihazırda depolanan Kur'an okuma ilerlemesinin yüzdesi de bir etkinlik olarak Firebase Analytics'e gönderilebilir.</li>
+      </ul>
+      <h3>Veri aktarımı ve kullanıcı seçimleri</h3>
+      <p>Analitik verileri Google sunucularına aktarılır ve burada işlenir. Google, Firebase ve Google Analytics aracılığıyla üçüncü taraf veri işleyicisi olarak hareket eder. Uygulama bir kullanıcının adını, e-posta adresini veya telefon numarasını toplamaz ve Analytics verilerini bu tür doğrudan tanımlayıcı bilgilerle ilişkilendirmeyiz. Yine de teknik tanımlayıcılar benzersiz kurulumları ve kullanımı ölçmek için kullanılabilir; sonuçlar istatistiksel ve toplu analiz için kullanılır.</p>
+      <p>Yaklaşık konum IP adresinden elde edilir; GPS veya kesin konum toplanmaz ve kesin konum izni istenmez.</p>
+      <p>Kullanıcılar reklam kişiselleştirmeyi devre dışı bırakabilir veya reklam tanımlayıcısını cihaz ayarlarından (örneğin Android'de <strong>Ayarlar → Google → Reklamlar</strong> aracılığıyla) sıfırlayabilir. Menü adları Android sürümüne ve cihaz üreticisine göre değişiklik gösterebilir.</p>
+      <p>Google'ın veri işleme ve gizlilik uygulamaları hakkında daha fazla bilgi için şu adresi ziyaret edin:<br /><a href="https://policies.google.com/privacy" rel="noopener noreferrer">https://policies.google.com/privacy</a></p><h2>Reklam ve üçüncü taraf hizmetler</h2>
       <p>Uygulamada reklam hizmetleri Google AdMob tarafından sağlanabilir. Bu durumda Google; reklamların gösterilmesi, performans ölçümü, sahtekârlığın önlenmesi ve hizmetin güvenli şekilde çalışması amacıyla bazı cihaz ve kullanım verilerini işleyebilir.</p>
       <p>Google'ın veri işleme ve gizlilik politikaları hakkında detaylı bilgi için şu sayfa incelenebilir:<br /><a href="https://policies.google.com/privacy" rel="noopener noreferrer">https://policies.google.com/privacy</a></p>
       <h2>Uygulama içi satın alma</h2>
@@ -185,8 +205,29 @@
       <h2>Information stored on the device</h2>
       <p>Application settings, reading preferences, and similar personal preferences may be stored on the user’s device. However, the technical and usage data described in the Firebase Analytics section below may be transmitted to Google to produce statistics.</p>
       <h2>Firebase Analytics and usage statistics</h2>
-      <p>The application uses Firebase Analytics, provided by Google, to measure usage statistics, understand which features are used, and improve the application. This service may process in-app interactions, session information, approximate location, device and operating system information, and identifiers such as an app-instance ID or advertising ID.</p>
-      <p>We do not associate this data with directly identifying information such as the user’s name, email address, or telephone number. Data processing performed through Firebase Analytics is subject to Google’s privacy policy and terms of service.</p>
+      <p>The application uses Firebase Analytics, provided by Google, to measure usage, understand which features are used, and improve the application.</p>
+      <h3>Currently collected automatically</h3>
+      <ul>
+        <li><strong>Device information:</strong> Device model, operating system and version, screen resolution, and language or regional settings.</li>
+        <li><strong>Application information:</strong> Application version, first installation time, and installation source.</li>
+        <li><strong>Usage metrics:</strong> Number of sessions, average session duration, daily, weekly and monthly active-user counts, and retention information showing whether the application is opened again after a period of time.</li>
+        <li><strong>Approximate geographic location:</strong> Country- or city-level location derived from the IP address. GPS or precise location is not collected, and the application does not request precise-location permission.</li>
+        <li><strong>Advertising identifier:</strong> Because Firebase Analytics is used together with Google AdMob, the Google Advertising ID may be processed for advertising and ad-personalization purposes.</li>
+        <li><strong>Standard system events:</strong> Events such as first opening (<code>first_open</code>), application update (<code>app_update</code>), and application removal (<code>app_remove</code>).</li>
+      </ul>
+      <h3>Planned Analytics events — not currently active</h3>
+      <p>The following information is not currently sent to Firebase Analytics. These events may be added in a future version and are listed separately to describe the planned scope in advance:</p>
+      <ul>
+        <li><strong>Language preference:</strong> The selected Quran translation language and menu language.</li>
+        <li><strong>Most-read surahs and verses:</strong> Aggregate usage statistics about which surahs and verses are read more frequently; this is not intended to create a personal reading profile.</li>
+        <li><strong>Use of the search feature:</strong> How often and in what manner the search feature is used. Search text is not included unless this policy is updated before such collection begins.</li>
+        <li><strong>Reading progress and completion rate:</strong> The percentage of Quran reading progress already stored on the device may also be sent to Firebase Analytics as an event.</li>
+      </ul>
+      <h3>Data transfer and user choices</h3>
+      <p>Analytics data is transferred to and processed on Google servers. Google acts as a third-party data processor through Firebase and Google Analytics. The application does not collect a user's name, email address, or telephone number, and we do not associate Analytics data with such directly identifying information. Technical identifiers may nevertheless be used to measure unique installations and usage; the results are used for statistical and aggregate analysis.</p>
+      <p>Approximate location is derived from the IP address; GPS or precise location is not collected and no precise-location permission is requested.</p>
+      <p>Users can disable advertising personalization or reset the advertising identifier from the device settings, for example on Android through <strong>Settings → Google → Ads</strong>. Menu names may vary by Android version and device manufacturer.</p>
+      <p>For more information about Google's data processing and privacy practices, visit:<br /><a href="https://policies.google.com/privacy" rel="noopener noreferrer">https://policies.google.com/privacy</a></p>
       <h2>Advertising and third-party services</h2>
       <p>Advertising services in the application may be provided by Google AdMob. In this case, Google may process certain device and usage data to display advertisements, measure performance, prevent fraud, and ensure the secure operation of the service.</p>
       <p>For detailed information about Google's data processing and privacy policies, please visit:<br /><a href="https://policies.google.com/privacy" rel="noopener noreferrer">https://policies.google.com/privacy</a></p>
@@ -214,9 +255,29 @@
       <h2>Auf dem Gerät gespeicherte Informationen</h2>
       <p>App-Einstellungen, Lesepräferenzen und ähnliche persönliche Einstellungen können auf dem Gerät des Nutzers gespeichert werden. Die im nachstehenden Abschnitt zu Firebase Analytics beschriebenen technischen und Nutzungsdaten können jedoch zur Erstellung von Statistiken an Google übermittelt werden.</p>
       <h2>Firebase Analytics und Nutzungsstatistiken</h2>
-      <p>Die Anwendung verwendet den von Google bereitgestellten Dienst Firebase Analytics, um Nutzungsstatistiken zu messen, die Nutzung von Funktionen zu verstehen und die Anwendung zu verbessern. Dieser Dienst kann Interaktionen innerhalb der App, Sitzungsinformationen, den ungefähren Standort, Geräte- und Betriebssysteminformationen sowie Kennungen wie eine App-Instanz-ID oder Werbe-ID verarbeiten.</p>
-      <p>Wir verknüpfen diese Daten nicht mit direkt identifizierenden Angaben wie Name, E-Mail-Adresse oder Telefonnummer des Nutzers. Die Datenverarbeitung durch Firebase Analytics unterliegt der Datenschutzerklärung und den Nutzungsbedingungen von Google.</p>
-      <h2>Werbung und Dienste Dritter</h2>
+      <p>Die Anwendung nutzt Firebase Analytics von Google, um die Nutzung zu messen, zu verstehen, welche Funktionen verwendet werden, und um die Anwendung zu verbessern.</p>
+      <h3>Derzeit automatisch erfasst</h3>
+      <ul>
+        <li><strong>Geräteinformationen:</strong> Gerätemodell, Betriebssystem und -version, Bildschirmauflösung sowie Sprach- oder Regionaleinstellungen.</li>
+        <li><strong>Anwendungsinformationen:</strong> Anwendungsversion, Erstinstallationszeitpunkt und Installationsquelle.</li>
+        <li><strong>Nutzungsmetriken:</strong> Anzahl der Sitzungen, durchschnittliche Sitzungsdauer, tägliche, wöchentliche und monatliche Anzahl aktiver Benutzer sowie Aufbewahrungsinformationen, die zeigen, ob die Anwendung nach einem bestimmten Zeitraum erneut geöffnet wird.</li>
+        <li><strong>Ungefährer geografischer Standort:</strong> Standort auf Landes- oder Stadtebene, abgeleitet von der IP-Adresse. GPS oder der genaue Standort werden nicht erfasst und die Anwendung fordert keine Genehmigung für den genauen Standort an.</li>
+        <li><strong>Werbe-ID:</strong> Da Firebase Analytics zusammen mit Google AdMob verwendet wird, kann die Google-Werbe-ID für Werbe- und Anzeigenpersonalisierungszwecke verarbeitet werden.</li>
+        <li><strong>Standardsystemereignisse:</strong> Ereignisse wie das erste Öffnen (<code>first_open</code>), Anwendungsaktualisierung (<code>app_update</code>) und Anwendungsentfernung (<code>app_remove</code>).</li>
+      </ul>
+      <h3>Geplante Analytics-Ereignisse – derzeit nicht aktiv</h3>
+      <p>Die folgenden Informationen werden derzeit nicht an Firebase Analytics gesendet. Diese Ereignisse können in einer zukünftigen Version hinzugefügt werden und werden separat aufgeführt, um den geplanten Umfang vorab zu beschreiben:</p>
+      <ul>
+        <li><strong>Spracheinstellung:</strong> Die ausgewählte Koran-Übersetzungssprache und Menüsprache.</li>
+        <li><strong>Meistgelesene Suren und Verse:</strong> Aggregierte Nutzungsstatistiken darüber, welche Suren und Verse häufiger gelesen werden; Dies ist nicht dazu gedacht, ein persönliches Leseprofil zu erstellen.</li>
+        <li><strong>Nutzung der Suchfunktion:</strong> Wie oft und auf welche Weise die Suchfunktion verwendet wird. Suchtext wird nicht einbezogen, es sei denn, diese Richtlinie wird aktualisiert, bevor mit der Erfassung begonnen wird.</li>
+        <li><strong>Lesefortschritt und Abschlussrate:</strong> Der Prozentsatz des Koran-Lesefortschritts, der bereits auf dem Gerät gespeichert ist, kann auch als Ereignis an Firebase Analytics gesendet werden.</li>
+      </ul>
+      <h3>Datenübertragung und Benutzerauswahl</h3>
+      <p>Analytics-Daten werden an Google-Server übertragen und dort verarbeitet. Google fungiert über Firebase und Google Analytics als externer Datenverarbeiter. Die Anwendung erfasst nicht den Namen, die E-Mail-Adresse oder die Telefonnummer eines Benutzers und wir verknüpfen Analytics-Daten nicht mit solchen direkt identifizierenden Informationen. Dennoch können technische Identifikatoren verwendet werden, um eindeutige Installationen und Nutzungen zu messen; Die Ergebnisse werden für statistische und aggregierte Analysen verwendet.</p>
+      <p>Der ungefähre Standort wird aus der IP-Adresse abgeleitet. GPS oder genauer Standort werden nicht erfasst und es wird keine Genehmigung für den genauen Standort angefordert.</p>
+      <p>Benutzer können die Personalisierung von Werbung deaktivieren oder die Werbekennung in den Geräteeinstellungen zurücksetzen, beispielsweise auf Android über <strong>Einstellungen → Google → Anzeigen</strong>. Menünamen können je nach Android-Version und Gerätehersteller variieren.</p>
+      <p>Weitere Informationen zur Datenverarbeitung und zum Datenschutz durch Google finden Sie unter:<br /><a href="https://policies.google.com/privacy" rel="noopener noreferrer">https://policies.google.com/privacy</a></p><h2>Werbung und Dienste Dritter</h2>
       <p>Werbedienste in der Anwendung können von Google AdMob bereitgestellt werden. In diesem Fall kann Google bestimmte Geräte- und Nutzungsdaten verarbeiten, um Werbung anzuzeigen, die Leistung zu messen, Betrug zu verhindern und den sicheren Betrieb des Dienstes zu gewährleisten.</p>
       <p>Ausführliche Informationen zur Datenverarbeitung und zu den Datenschutzrichtlinien von Google finden Sie unter:<br /><a href="https://policies.google.com/privacy" rel="noopener noreferrer">https://policies.google.com/privacy</a></p>
       <h2>In-App-Käufe</h2>
@@ -243,9 +304,29 @@
       <h2>Información almacenada en el dispositivo</h2>
       <p>La configuración de la aplicación, las preferencias de lectura y otras preferencias personales similares pueden almacenarse en el dispositivo del usuario. Sin embargo, los datos técnicos y de uso descritos en la sección de Firebase Analytics pueden transmitirse a Google para elaborar estadísticas.</p>
       <h2>Firebase Analytics y estadísticas de uso</h2>
-      <p>La aplicación utiliza Firebase Analytics, un servicio proporcionado por Google, para medir estadísticas de uso, comprender qué funciones se utilizan y mejorar la aplicación. Este servicio puede procesar interacciones dentro de la aplicación, información de las sesiones, ubicación aproximada, información del dispositivo y del sistema operativo, e identificadores como el ID de instancia de la aplicación o el identificador publicitario.</p>
-      <p>No asociamos estos datos con información de identificación directa, como el nombre, la dirección de correo electrónico o el número de teléfono del usuario. El tratamiento realizado mediante Firebase Analytics está sujeto a la política de privacidad y a las condiciones del servicio de Google.</p>
-      <h2>Publicidad y servicios de terceros</h2>
+      <p>La aplicación utiliza Firebase Analytics, proporcionado por Google, para medir el uso, comprender qué funciones se utilizan y mejorar la aplicación.</p>
+      <h3>Actualmente recopilados automáticamente</h3>
+      <ul>
+        <li><strong>Información del dispositivo:</strong> modelo del dispositivo, sistema operativo y versión, resolución de pantalla y configuración regional o de idioma.</li>
+        <li><strong>Información de la aplicación:</strong> versión de la aplicación, hora de la primera instalación y origen de la instalación.</li>
+        <li><strong>Métricas de uso:</strong> número de sesiones, duración promedio de la sesión, recuentos diarios, semanales y mensuales de usuarios activos e información de retención que muestra si la aplicación se vuelve a abrir después de un período de tiempo.</li>
+        <li><strong>Ubicación geográfica aproximada:</strong> ubicación a nivel de país o ciudad derivada de la dirección IP. No se recopila GPS ni ubicación precisa y la aplicación no solicita permiso de ubicación precisa.</li>
+        <li><strong>Identificador de publicidad:</strong> dado que Firebase Analytics se utiliza junto con Google AdMob, el ID de publicidad de Google puede procesarse con fines publicitarios y de personalización de anuncios.</li>
+        <li><strong>Eventos estándar del sistema:</strong> eventos como la primera apertura (<code>first_open</code>), la actualización de la aplicación (<code>app_update</code>) y la eliminación de la aplicación (<code>app_remove</code>).</li>
+      </ul>
+      <h3>Eventos de Analytics planificados: actualmente no activos</h3>
+      <p>La siguiente información no se envía actualmente a Firebase Analytics. Estos eventos se pueden agregar en una versión futura y se enumeran por separado para describir el alcance planificado con anticipación:</p>
+      <ul>
+        <li><strong>Preferencia de idioma:</strong> el idioma de traducción del Corán y el idioma del menú seleccionados.</li>
+        <li><strong>Suras y versos más leídos:</strong> Estadísticas de uso agregadas sobre qué suras y versos se leen con más frecuencia; Esto no pretende crear un perfil de lectura personal.</li>
+        <li><strong>Uso de la función de búsqueda:</strong> con qué frecuencia y de qué manera se utiliza la función de búsqueda. El texto de búsqueda no se incluye a menos que esta política se actualice antes de que comience dicha recopilación.</li>
+        <li><strong>Progreso de la lectura y tasa de finalización:</strong> el porcentaje del progreso de la lectura del Corán ya almacenado en el dispositivo también se puede enviar a Firebase Analytics como un evento.</li>
+      </ul>
+      <h3>Transferencia de datos y elecciones del usuario</h3>
+      <p>Los datos analíticos se transfieren y procesan en los servidores de Google. Google actúa como encargado del tratamiento de datos de terceros a través de Firebase y Google Analytics. La aplicación no recopila el nombre, la dirección de correo electrónico ni el número de teléfono de un usuario, y no asociamos datos de Analytics con dicha información de identificación directa. No obstante, se podrán utilizar identificadores técnicos para medir instalaciones y usos únicos; los resultados se utilizan para análisis estadísticos y agregados.</p>
+      <p>La ubicación aproximada se deriva de la dirección IP; No se recopila el GPS ni la ubicación precisa y no se solicita ningún permiso de ubicación precisa.</p>
+      <p>Los usuarios pueden desactivar la personalización de publicidad o restablecer el identificador de publicidad desde la configuración del dispositivo, por ejemplo en Android a través de <strong>Configuración → Google → Anuncios</strong>. Los nombres de los menús pueden variar según la versión de Android y el fabricante del dispositivo.</p>
+      <p>Para obtener más información sobre las prácticas de privacidad y procesamiento de datos de Google, visite:<br /><a href="https://policies.google.com/privacy" rel="noopener noreferrer">https://policies.google.com/privacy</a></p><h2>Publicidad y servicios de terceros</h2>
       <p>Los servicios publicitarios de la aplicación pueden ser proporcionados por Google AdMob. En tal caso, Google puede procesar determinados datos del dispositivo y de uso para mostrar anuncios, medir el rendimiento, prevenir el fraude y garantizar el funcionamiento seguro del servicio.</p>
       <p>Para obtener información detallada sobre el tratamiento de datos y las políticas de privacidad de Google, visite:<br /><a href="https://policies.google.com/privacy" rel="noopener noreferrer">https://policies.google.com/privacy</a></p>
       <h2>Compras dentro de la aplicación</h2>
@@ -271,10 +352,30 @@
       <p>本应用不提供用户账户、会员、登录系统或个人资料创建功能。</p>
       <h2>存储在设备上的信息</h2>
       <p>应用设置、阅读偏好及类似个人偏好可能存储在用户设备上。但是，下方 Firebase Analytics 部分所述的技术数据和使用数据可能会传输给 Google，用于生成统计信息。</p>
-      <h2>Firebase Analytics 与使用统计</h2>
-      <p>本应用使用 Google 提供的 Firebase Analytics，以衡量使用情况、了解功能使用情况并改进应用。该服务可能处理应用内互动、会话信息、大致位置、设备和操作系统信息，以及应用实例 ID 或广告 ID 等标识符。</p>
-      <p>我们不会将这些数据与用户姓名、电子邮件地址或电话号码等可直接识别身份的信息相关联。通过 Firebase Analytics 进行的数据处理受 Google 隐私权政策和服务条款约束。</p>
-      <h2>广告与第三方服务</h2>
+      <h2>Firebase Analytics 和使用情况统计信息</h2>
+      <p>该应用使用 Google 提供的 Firebase Analytics 来衡量使用情况、了解使用了哪些功能并改进应用。</p>
+      <h3>当前自动收集</h3>
+      <ul>
+        <li><strong>设备信息</strong>：设备型号、操作系统和版本、屏幕分辨率以及语言或区域设置。</li>
+        <li><strong>应用信息：</strong>应用版本、首次安装时间、安装来源。</li>
+        <li><strong>使用指标</strong>：会话数、平均会话持续时间、每日、每周和每月的活跃用户数，以及显示应用程序在一段时间后是否再次打开的保留信息。</li>
+        <li><strong>大致地理位置：</strong>根据 IP 地址得出的国家或城市级位置。不收集 GPS 或精确位置，并且应用程序不请求精确位置权限。</li>
+        <li><strong>广告标识符</strong>：由于 Firebase Analytics 与 Google AdMob 一起使用，因此可能会出于广告和广告个性化目的对 Google 广告 ID 进行处理。</li>
+        <li><strong>标准系统事件</strong>：首次打开 (<code>first_open</code>)、应用程序更新 (<code>app_update</code>) 和应用程序删除 (<code>app_remove</code>) 等事件。</li>
+      </ul>
+      <h3>计划的 Analytics 事件 - 当前未活动</h3>
+      <p>以下信息当前不会发送到 Firebase Analytics。这些事件可能会在未来版本中添加，并单独列出以提前描述计划范围：</p>
+      <ul>
+        <li><strong>语言首选项</strong>：所选的《古兰经》翻译语言和菜单语言。</li>
+        <li><strong>最常阅读的古兰经和经文：</strong>有关哪些古兰经和经文阅读更频繁的汇总使用统计信息；这并不是为了创建个人阅读资料。</li>
+        <li><strong>搜索功能的使用</strong>：使用搜索功能的频率和方式。除非在此类收集开始之前更新此政策，否则不会包含搜索文本。</li>
+        <li><strong>阅读进度和完成率</strong>：设备上已存储的《古兰经》阅读进度百分比也可能会作为事件发送到 Firebase Analytics。</li>
+      </ul>
+      <h3>数据传输和用户选择</h3>
+      <p>分析数据会传输到 Google 服务器并在其中进行处理。 Google 通过 Firebase 和 Google Analytics 充当第三方数据处理者。该应用程序不会收集用户的姓名、电子邮件地址或电话号码，并且我们不会将 Analytics 数据与此类直接识别信息相关联。尽管如此，技术标识符仍可用于衡量独特的安装和使用情况；结果用于统计和汇总分析。</p>
+      <p>根据 IP 地址得出大致位置；不收集 GPS 或精确位置，也不请求精确位置权限。</p>
+      <p>用户可以在设备设置中禁用广告个性化或重置广告标识符，例如在 Android 上通过<strong>设置 → Google → 广告</strong>。菜单名称可能因 Android 版本和设备制造商而异。</p>
+      <p>有关 Google 数据处理和隐私惯例的详细信息，请访问：<br /><a href="https://policies.google.com/privacy" rel="noopener noreferrer">https://policies.google.com/privacy</a></p><h2>广告与第三方服务</h2>
       <p>本应用中的广告服务可能由 Google AdMob 提供。在这种情况下，Google 可能会处理某些设备和使用数据，以展示广告、衡量效果、防止欺诈并确保服务安全运行。</p>
       <p>如需详细了解 Google 的数据处理和隐私政策，请访问：<br /><a href="https://policies.google.com/privacy" rel="noopener noreferrer">https://policies.google.com/privacy</a></p>
       <h2>应用内购买</h2>
@@ -300,10 +401,30 @@
       <p>本アプリには、ユーザーアカウント、会員登録、ログインシステム、またはプロフィール作成機能はありません。</p>
       <h2>端末に保存される情報</h2>
       <p>アプリの設定、読書設定、その他同様の個人的な設定は、ユーザーの端末に保存される場合があります。ただし、以下の Firebase Analytics の項目に記載された技術情報および利用情報は、統計作成のため Google に送信される場合があります。</p>
-      <h2>Firebase Analytics と利用統計</h2>
-      <p>本アプリは、利用統計の測定、使用されている機能の把握、およびアプリの改善を目的として、Google が提供する Firebase Analytics を使用します。このサービスは、アプリ内の操作、セッション情報、おおよその位置情報、端末および OS の情報、アプリインスタンス ID や広告 ID などの識別子を処理する場合があります。</p>
-      <p>当方は、これらのデータをユーザーの氏名、メールアドレス、電話番号などの直接個人を特定できる情報と関連付けません。Firebase Analytics によるデータ処理には、Google のプライバシーポリシーおよび利用規約が適用されます。</p>
-      <h2>広告および第三者サービス</h2>
+      <h2>Firebase Analytics と使用状況の統計</h2>
+      <p>このアプリケーションは、Google が提供する Firebase Analytics を使用して、使用状況を測定し、どの機能が使用されているかを把握し、アプリケーションを改善します。</p>
+      <h3>現在は自動的に収集されています</h3>
+      <ul>
+        <li><strong>デバイス情報:</strong> デバイスのモデル、オペレーティング システムとバージョン、画面解像度、言語または地域の設定。</li>
+        <li><strong>アプリケーション情報:</strong> アプリケーションのバージョン、初回インストール時間、インストール ソース。</li>
+        <li><strong>使用状況の指標:</strong> セッション数、平均セッション継続時間、日次、週次、月次のアクティブ ユーザー数、一定期間後にアプリケーションが再び開かれたかどうかを示す保持情報。</li>
+        <li><strong>おおよその地理的位置:</strong> IP アドレスから得られる国または都市レベルの位置。 GPS または正確な位置情報は収集されず、アプリケーションは正確な位置情報の許可を要求しません。</li>
+        <li><strong>広告 ID:</strong> Firebase Analytics は Google AdMob と一緒に使用されるため、Google 広告 ID は広告や広告のパーソナライズを目的として処理される場合があります。</li>
+        <li><strong>標準システム イベント:</strong> 最初の起動 (<code>first_open</code>)、アプリケーションの更新 (<code>app_update</code>)、アプリケーションの削除 (<code>app_remove</code>) などのイベント。</li>
+      </ul>
+      <h3>計画された分析イベント - 現在アクティブではありません</h3>
+      <p>次の情報は現在 Firebase Analytics に送信されていません。これらのイベントは将来のバージョンで追加される可能性があり、計画された範囲を事前に説明するために個別にリストされています。</p>
+      <ul>
+        <li><strong>言語設定:</strong> 選択したコーラン翻訳言語とメニュー言語。</li>
+        <li><strong>最も読まれているスーラと詩句:</strong> どのスーラと詩句がより頻繁に読まれているかに関する集計使用統計。これは、個人的な読書プロフィールを作成することを目的としたものではありません。</li>
+        <li><strong>検索機能の使用:</strong> 検索機能が使用される頻度と方法。検索テキストは、収集が開始される前にこのポリシーが更新されない限り含まれません。</li>
+        <li><strong>読書の進行状況と完了率:</strong> デバイスにすでに保存されているコーランの読書の進行状況の割合も、イベントとして Firebase Analytics に送信される場合があります。</li>
+      </ul>
+      <h3>データ転送とユーザーの選択</h3>
+      <p>分析データは Google サーバーに転送され、そこで処理されます。 Google は、Firebase と Google Analytics を通じてサードパーティのデータ処理者として機能します。このアプリケーションはユーザーの名前、電子メール アドレス、電話番号を収集しません。また、Analytics データをそのような直接識別情報に関連付けることもありません。ただし、技術識別子は、固有の設置および使用状況を測定するために使用される場合があります。結果は統計分析と集計分析に使用されます。</p>
+      <p>おおよその位置は IP アドレスから導出されます。 GPS または正確な位置情報は収集されず、正確な位置情報の許可も要求されません。</p>
+      <p>ユーザーは、Android などのデバイス設定から、<strong>[設定] → [Google] → [広告]</strong> を選択して、広告のパーソナライズを無効にしたり、広告識別子をリセットしたりできます。メニュー名は Android のバージョンとデバイスのメーカーによって異なる場合があります。</p>
+      <p>Google のデータ処理とプライバシー慣行の詳細については、<br /><a href="https://policies.google.com/privacy" rel="noopener noreferrer">https://policies.google.com/privacy</a> をご覧ください。</p><h2>広告および第三者サービス</h2>
       <p>本アプリの広告サービスは、Google AdMob によって提供される場合があります。その場合、Google は、広告の表示、パフォーマンス測定、不正行為の防止、およびサービスの安全な運用を目的として、特定の端末データや利用データを処理することがあります。</p>
       <p>Google のデータ処理およびプライバシーポリシーの詳細については、以下をご覧ください。<br /><a href="https://policies.google.com/privacy" rel="noopener noreferrer">https://policies.google.com/privacy</a></p>
       <h2>アプリ内購入</h2>
@@ -329,10 +450,30 @@
       <p>В приложении отсутствуют учётные записи пользователей, регистрация, система входа и функция создания профиля.</p>
       <h2>Информация, хранящаяся на устройстве</h2>
       <p>Настройки приложения, предпочтения чтения и аналогичные личные настройки могут храниться на устройстве пользователя. Однако технические данные и сведения об использовании, описанные ниже в разделе Firebase Analytics, могут передаваться Google для формирования статистики.</p>
-      <h2>Firebase Analytics и статистика использования</h2>
-      <p>Приложение использует сервис Firebase Analytics, предоставляемый Google, для измерения статистики использования, определения востребованных функций и улучшения приложения. Сервис может обрабатывать сведения о действиях в приложении и сеансах, приблизительное местоположение, информацию об устройстве и операционной системе, а также такие идентификаторы, как идентификатор экземпляра приложения или рекламный идентификатор.</p>
-      <p>Мы не связываем эти данные с информацией, непосредственно идентифицирующей пользователя, такой как имя, адрес электронной почты или номер телефона. Обработка данных с помощью Firebase Analytics регулируется политикой конфиденциальности и условиями использования Google.</p>
-      <h2>Реклама и сторонние сервисы</h2>
+      <h2>Аналитика Firebase и статистика использования</h2>
+      <p>Приложение использует Firebase Analytics, предоставленное Google, для измерения использования, понимания того, какие функции используются, и улучшения приложения.</p>
+      <h3>В настоящее время собирается автоматически</h3>
+      <ul>
+        <li><strong>Информация об устройстве:</strong> модель устройства, операционная система и версия, разрешение экрана, а также языковые или региональные настройки.</li>
+        <li><strong>Информация о приложении:</strong> версия приложения, время первой установки и источник установки.</li>
+        <li><strong>Показатели использования:</strong> количество сеансов, средняя продолжительность сеанса, количество активных пользователей за день, неделю и месяц, а также информация об удержании, показывающая, открывается ли приложение снова через определенный период времени.</li>
+        <li><strong>Приблизительное географическое местоположение:</strong> местоположение на уровне страны или города, полученное на основе IP-адреса. GPS или точное местоположение не собираются, и приложение не запрашивает разрешение на определение точного местоположения.</li>
+        <li><strong>Рекламный идентификатор.</strong> Поскольку Firebase Analytics используется вместе с Google AdMob, рекламный идентификатор Google может обрабатываться в целях рекламы и персонализации рекламы.</li>
+        <li><strong>Стандартные системные события</strong>. Такие события, как первое открытие (<code>first_open</code>), обновление приложения (<code>app_update</code>) и удаление приложения (<code>app_remove</code>).</li>
+      </ul>
+      <h3>Запланированные события Analytics – в настоящее время неактивны</h3>
+      <p>Следующая информация в настоящее время не отправляется в Firebase Analytics. Эти события могут быть добавлены в будущей версии и перечислены отдельно для предварительного описания запланированного объема:</p>
+      <ul>
+        <li><strong>Языковые настройки:</strong> выбранный язык перевода Корана и язык меню.</li>
+        <li><strong>Самые читаемые суры и аяты.</strong> Совокупная статистика использования, показывающая, какие суры и аяты читаются чаще; это не предназначено для создания личного профиля чтения.</li>
+        <li><strong>Использование функции поиска.</strong> Как часто и каким образом используется функция поиска. Текст поиска не включается, если эта политика не будет обновлена до начала сбора данных.</li>
+        <li><strong>Прогресс чтения и процент завершения.</strong> Процент прогресса чтения Корана, уже сохраненный на устройстве, также может быть отправлен в Firebase Analytics как событие.</li>
+      </ul>
+      <h3>Передача данных и выбор пользователя</h3>
+      <p>Данные Analytics передаются и обрабатываются на серверах Google. Google выступает в качестве стороннего обработчика данных через Firebase и Google Analytics. Приложение не собирает имя пользователя, адрес электронной почты или номер телефона, и мы не связываем данные Analytics с такой непосредственно идентифицирующей информацией. Тем не менее, технические идентификаторы могут использоваться для измерения уникальных установок и использования; результаты используются для статистического и совокупного анализа.</p>
+      <p>Приблизительное местоположение определяется по IP-адресу; GPS или точное местоположение не собираются, и разрешение на определение точного местоположения не запрашивается.</p>
+      <p>Пользователи могут отключить персонализацию рекламы или сбросить рекламный идентификатор в настройках устройства, например на Android, через <strong>Настройки → Google → Реклама</strong>. Названия меню могут различаться в зависимости от версии Android и производителя устройства.</p>
+      <p>Для получения дополнительной информации о методах обработки данных и конфиденциальности Google посетите:<br /><a href="https://policies.google.com/privacy" rel="noopener noreferrer">https://policies.google.com/privacy</a></p><h2>Реклама и сторонние сервисы</h2>
       <p>Рекламные услуги в приложении могут предоставляться Google AdMob. В этом случае Google может обрабатывать определённые данные об устройстве и использовании для показа рекламы, измерения эффективности, предотвращения мошенничества и обеспечения безопасной работы сервиса.</p>
       <p>Подробную информацию об обработке данных и политике конфиденциальности Google можно найти на странице:<br /><a href="https://policies.google.com/privacy" rel="noopener noreferrer">https://policies.google.com/privacy</a></p>
       <h2>Покупки в приложении</h2>
@@ -359,9 +500,29 @@
   <h2>Informazioni memorizzate sul dispositivo</h2>
       <p>Le impostazioni dell’applicazione, le preferenze di lettura e altre preferenze personali simili possono essere memorizzate sul dispositivo dell’utente. Tuttavia, i dati tecnici e di utilizzo descritti nella sezione Firebase Analytics possono essere trasmessi a Google per produrre statistiche.</p>
   <h2>Firebase Analytics e statistiche di utilizzo</h2>
-      <p>L’applicazione utilizza Firebase Analytics, fornito da Google, per misurare le statistiche di utilizzo, comprendere quali funzioni vengono utilizzate e migliorare l’applicazione. Il servizio può trattare interazioni nell’app, informazioni sulle sessioni, posizione approssimativa, informazioni sul dispositivo e sul sistema operativo, nonché identificatori come l’ID istanza dell’app o l’ID pubblicitario.</p>
-      <p>Non associamo questi dati a informazioni direttamente identificative quali nome, indirizzo e-mail o numero di telefono dell’utente. Il trattamento effettuato tramite Firebase Analytics è soggetto all’informativa sulla privacy e ai termini di servizio di Google.</p>
-      <h2>Pubblicità e servizi di terze parti</h2>
+      <p>L'applicazione utilizza Firebase Analytics, fornito da Google, per misurare l'utilizzo, comprendere quali funzionalità vengono utilizzate e migliorare l'applicazione.</p>
+      <h3>Attualmente raccolto automaticamente</h3>
+      <ul>
+        <li><strong>Informazioni sul dispositivo:</strong> modello del dispositivo, sistema operativo e versione, risoluzione dello schermo e impostazioni regionali o della lingua.</li>
+        <li><strong>Informazioni sull'applicazione:</strong> versione dell'applicazione, ora della prima installazione e origine dell'installazione.</li>
+        <li><strong>Metriche di utilizzo:</strong> numero di sessioni, durata media della sessione, conteggio degli utenti attivi giornalieri, settimanali e mensili e informazioni sulla conservazione che mostrano se l'applicazione viene riaperta dopo un periodo di tempo.</li>
+        <li><strong>Posizione geografica approssimativa:</strong> posizione a livello di paese o città derivata dall'indirizzo IP. La posizione GPS o precisa non viene raccolta e l'applicazione non richiede l'autorizzazione alla posizione precisa.</li>
+        <li><strong>Identificatore pubblicitario:</strong> poiché Firebase Analytics viene utilizzato insieme a Google AdMob, l'ID pubblicità di Google potrebbe essere elaborato per scopi pubblicitari e di personalizzazione degli annunci.</li>
+        <li><strong>Eventi di sistema standard:</strong> eventi come prima apertura (<code>first_open</code>), aggiornamento dell'applicazione (<code>app_update</code>) e rimozione dell'applicazione (<code>app_remove</code>).</li>
+      </ul>
+      <h3>Eventi Analytics pianificati: attualmente non attivi</h3>
+      <p>Le seguenti informazioni non vengono attualmente inviate a Firebase Analytics. Questi eventi potrebbero essere aggiunti in una versione futura e sono elencati separatamente per descrivere in anticipo l'ambito pianificato:</p>
+      <ul>
+        <li><strong>Preferenza lingua:</strong> la lingua di traduzione del Corano selezionata e la lingua del menu.</li>
+        <li><strong>Sura e versetti più letti:</strong> statistiche di utilizzo aggregate su quali sure e versetti vengono letti più frequentemente; questo non è destinato a creare un profilo di lettura personale.</li>
+        <li><strong>Utilizzo della funzione di ricerca:</strong> quanto spesso e in che modo viene utilizzata la funzione di ricerca. Il testo di ricerca non è incluso a meno che questa politica non venga aggiornata prima dell'inizio di tale raccolta.</li>
+        <li><strong>Avanzamento nella lettura e tasso di completamento:</strong> la percentuale di avanzamento nella lettura del Corano già memorizzata sul dispositivo può anche essere inviata a Firebase Analytics come evento.</li>
+      </ul>
+      <h3>Trasferimento dati e scelte dell'utente</h3>
+      <p>I dati analitici vengono trasferiti ed elaborati sui server di Google. Google agisce come responsabile del trattamento dei dati di terze parti attraverso Firebase e Google Analytics. L'applicazione non raccoglie il nome, l'indirizzo e-mail o il numero di telefono dell'utente e non associamo i dati di Analytics a tali informazioni di identificazione diretta. Gli identificatori tecnici possono tuttavia essere utilizzati per misurare installazioni e utilizzi unici; i risultati vengono utilizzati per analisi statistiche e aggregate.</p>
+      <p>La posizione approssimativa deriva dall'indirizzo IP; La posizione GPS o precisa non viene raccolta e non è richiesta alcuna autorizzazione per la posizione precisa.</p>
+      <p>Gli utenti possono disattivare la personalizzazione della pubblicità o reimpostare l'identificatore pubblicitario dalle impostazioni del dispositivo, ad esempio su Android tramite <strong>Impostazioni → Google → Annunci</strong>. I nomi dei menu possono variare in base alla versione di Android e al produttore del dispositivo.</p>
+      <p>Per ulteriori informazioni sul trattamento dei dati e sulle pratiche sulla privacy di Google, visitare:<br /><a href="https://policies.google.com/privacy" rel="noopener noreferrer">https://policies.google.com/privacy</a></p><h2>Pubblicità e servizi di terze parti</h2>
   <p>I servizi pubblicitari nell'applicazione possono essere forniti da Google AdMob. In tal caso, Google può trattare determinati dati relativi al dispositivo e all'utilizzo al fine di mostrare annunci pubblicitari, misurare le prestazioni, prevenire le frodi e garantire il funzionamento sicuro del servizio.</p>
   <p>Per informazioni dettagliate sul trattamento dei dati e sulle norme sulla privacy di Google, consultare la seguente pagina:<br /><a href="https://policies.google.com/privacy" rel="noopener noreferrer">https://policies.google.com/privacy</a></p>
   <h2>Acquisti in-app</h2>
@@ -387,10 +548,30 @@
   <p>A aplicação não inclui contas de utilizador, adesão, um sistema de início de sessão ou criação de perfis.</p>
   <h2>Informações armazenadas no dispositivo</h2>
       <p>As definições da aplicação, as preferências de leitura e outras preferências pessoais semelhantes podem ser armazenadas no dispositivo do utilizador. No entanto, os dados técnicos e de utilização descritos na secção Firebase Analytics podem ser transmitidos à Google para produzir estatísticas.</p>
-  <h2>Firebase Analytics e estatísticas de utilização</h2>
-      <p>A aplicação utiliza o Firebase Analytics, fornecido pela Google, para medir estatísticas de utilização, compreender quais as funcionalidades utilizadas e melhorar a aplicação. Este serviço pode tratar interações na aplicação, informações de sessão, localização aproximada, informações do dispositivo e do sistema operativo, bem como identificadores como o ID de instância da aplicação ou o ID de publicidade.</p>
-      <p>Não associamos estes dados a informações diretamente identificáveis, como o nome, o endereço de correio eletrónico ou o número de telefone do utilizador. O tratamento realizado através do Firebase Analytics está sujeito à política de privacidade e aos termos de serviço da Google.</p>
-      <h2>Publicidade e serviços de terceiros</h2>
+  <h2>Firebase Analytics e estatísticas de uso</h2>
+      <p>O aplicativo usa o Firebase Analytics, fornecido pelo Google, para medir o uso, entender quais recursos são usados e melhorar o aplicativo.</p>
+      <h3>Atualmente coletado automaticamente</h3>
+      <ul>
+        <li><strong>Informações do dispositivo:</strong> modelo do dispositivo, sistema operacional e versão, resolução de tela e idioma ou configurações regionais.</li>
+        <li><strong>Informações do aplicativo:</strong> versão do aplicativo, horário da primeira instalação e fonte de instalação.</li>
+        <li><strong>Métricas de uso:</strong> número de sessões, duração média da sessão, contagens diárias, semanais e mensais de usuários ativos e informações de retenção que mostram se o aplicativo é aberto novamente após um período de tempo.</li>
+        <li><strong>Localização geográfica aproximada:</strong> localização em nível de país ou cidade derivada do endereço IP. O GPS ou a localização precisa não são coletados e o aplicativo não solicita permissão de localização precisa.</li>
+        <li><strong>Identificador de publicidade:</strong> como o Firebase Analytics é usado em conjunto com o Google AdMob, o ID de publicidade do Google pode ser processado para fins de publicidade e personalização de anúncios.</li>
+        <li><strong>Eventos padrão do sistema:</strong> eventos como primeira abertura (<code>first_open</code>), atualização de aplicativo (<code>app_update</code>) e remoção de aplicativo (<code>app_remove</code>).</li>
+      </ul>
+      <h3>Eventos planejados do Analytics — atualmente não ativos</h3>
+      <p>As informações a seguir não são enviadas atualmente ao Firebase Analytics. Esses eventos podem ser adicionados em uma versão futura e estão listados separadamente para descrever antecipadamente o escopo planejado:</p>
+      <ul>
+        <li><strong>Preferência de idioma:</strong> o idioma de tradução do Alcorão selecionado e o idioma do menu.</li>
+        <li><strong>Suratas e versículos mais lidos:</strong> estatísticas de uso agregadas sobre quais suratas e versículos são lidos com mais frequência; isso não tem como objetivo criar um perfil de leitura pessoal.</li>
+        <li><strong>Uso do recurso de pesquisa:</strong> com que frequência e de que maneira o recurso de pesquisa é usado. O texto de pesquisa não será incluído, a menos que esta política seja atualizada antes do início da coleta.</li>
+        <li><strong>Progresso da leitura e taxa de conclusão:</strong> a porcentagem do progresso da leitura do Alcorão já armazenada no dispositivo também pode ser enviada ao Firebase Analytics como um evento.</li>
+      </ul>
+      <h3>Transferência de dados e escolhas do usuário</h3>
+      <p>Os dados analíticos são transferidos e processados nos servidores do Google. O Google atua como processador de dados terceirizado por meio do Firebase e do Google Analytics. O aplicativo não coleta nome, endereço de e-mail ou número de telefone de um usuário e não associamos dados do Analytics a essas informações de identificação direta. No entanto, os identificadores técnicos podem ser utilizados para medir instalações e utilizações únicas; os resultados são usados para análise estatística e agregada.</p>
+      <p>A localização aproximada é derivada do endereço IP; O GPS ou a localização precisa não são coletados e nenhuma permissão de localização precisa é solicitada.</p>
+      <p>Os usuários podem desativar a personalização de publicidade ou redefinir o identificador de publicidade nas configurações do dispositivo, por exemplo, no Android, em <strong>Configurações → Google → Anúncios</strong>. Os nomes dos menus podem variar de acordo com a versão do Android e o fabricante do dispositivo.</p>
+      <p>Para obter mais informações sobre o processamento de dados e as práticas de privacidade do Google, visite:<br /><a href="https://policies.google.com/privacy" rel="noopener noreferrer">https://policies.google.com/privacy</a></p><h2>Publicidade e serviços de terceiros</h2>
   <p>Os serviços de publicidade na aplicação podem ser fornecidos pelo Google AdMob. Nesse caso, a Google pode tratar determinados dados do dispositivo e de utilização para apresentar anúncios, medir o desempenho, prevenir fraudes e garantir o funcionamento seguro do serviço.</p>
   <p>Para obter informações detalhadas sobre o tratamento de dados e as políticas de privacidade da Google, consulte a seguinte página:<br /><a href="https://policies.google.com/privacy" rel="noopener noreferrer">https://policies.google.com/privacy</a></p>
   <h2>Compras na aplicação</h2>
@@ -417,9 +598,29 @@
   <h2>Informații stocate pe dispozitiv</h2>
       <p>Setările aplicației, preferințele de lectură și alte preferințe personale similare pot fi stocate pe dispozitivul utilizatorului. Cu toate acestea, datele tehnice și de utilizare descrise în secțiunea Firebase Analytics pot fi transmise către Google pentru realizarea statisticilor.</p>
   <h2>Firebase Analytics și statistici de utilizare</h2>
-      <p>Aplicația utilizează Firebase Analytics, furnizat de Google, pentru a măsura statisticile de utilizare, a înțelege ce funcții sunt utilizate și a îmbunătăți aplicația. Serviciul poate prelucra interacțiunile din aplicație, informațiile despre sesiuni, locația aproximativă, informațiile despre dispozitiv și sistemul de operare, precum și identificatori precum ID-ul instanței aplicației sau ID-ul de publicitate.</p>
-      <p>Nu asociem aceste date cu informații care identifică direct utilizatorul, precum numele, adresa de e-mail sau numărul de telefon. Prelucrarea efectuată prin Firebase Analytics este supusă politicii de confidențialitate și condițiilor de utilizare Google.</p>
-      <h2>Publicitate și servicii furnizate de terți</h2>
+      <p>Aplicația folosește Firebase Analytics, oferit de Google, pentru a măsura utilizarea, pentru a înțelege ce caracteristici sunt utilizate și pentru a îmbunătăți aplicația.</p>
+      <h3>Colectat în prezent automat</h3>
+      <ul>
+        <li><strong>Informații despre dispozitiv:</strong> modelul dispozitivului, sistemul de operare și versiunea, rezoluția ecranului și setările de limbă sau regionale.</li>
+        <li><strong>Informații despre aplicație:</strong> versiunea aplicației, ora primei instalări și sursa instalării.</li>
+        <li><strong>Valori de utilizare:</strong> numărul de sesiuni, durata medie a sesiunii, numărul de utilizatori activi zilnic, săptămânal și lunar și informații de păstrare care arată dacă aplicația este deschisă din nou după o perioadă de timp.</li>
+        <li><strong>Locație geografică aproximativă:</strong> locație la nivel de țară sau oraș derivată din adresa IP. GPS sau locația precisă nu este colectată, iar aplicația nu solicită permisiunea de locație precisă.</li>
+        <li><strong>Identificator de publicitate:</strong> deoarece Firebase Analytics este utilizat împreună cu Google AdMob, ID-ul de publicitate Google poate fi procesat în scopuri publicitare și de personalizare a anunțurilor.</li>
+        <li><strong>Evenimente standard de sistem:</strong> evenimente precum prima deschidere (<code>first_open</code>), actualizarea aplicației (<code>app_update</code>) și eliminarea aplicației (<code>app_remove</code>).</li>
+      </ul>
+      <h3>Evenimente Google Analytics planificate — nu sunt active în prezent</h3>
+      <p>În prezent, următoarele informații nu sunt trimise către Firebase Analytics. Aceste evenimente pot fi adăugate într-o versiune viitoare și sunt enumerate separat pentru a descrie în prealabil domeniul planificat:</p>
+      <ul>
+        <li><strong>Preferință de limbă:</strong> limba de traducere a Coranului și limba meniului selectate.</li>
+        <li><strong>Sure și versete cele mai citite:</strong> statistici de utilizare cumulate despre care sure și versete sunt citite mai frecvent; acest lucru nu are scopul de a crea un profil personal de lectură.</li>
+        <li><strong>Utilizarea funcției de căutare:</strong> cât de des și în ce mod este utilizată funcția de căutare. Textul de căutare nu este inclus decât dacă această politică este actualizată înainte de începerea unei astfel de colectări.</li>
+        <li><strong>Progresul citirii și rata de finalizare:</strong> procentul din progresul citirii Coranului deja stocat pe dispozitiv poate fi trimis și la Firebase Analytics ca eveniment.</li>
+      </ul>
+      <h3>Transferul de date și opțiunile utilizatorului</h3>
+      <p>Datele de analiză sunt transferate și procesate pe serverele Google. Google acționează ca un procesator de date terță parte prin Firebase și Google Analytics. Aplicația nu colectează numele unui utilizator, adresa de e-mail sau numărul de telefon și nu asociem datele Analytics cu astfel de informații de identificare directă. Cu toate acestea, identificatorii tehnici pot fi utilizați pentru a măsura instalațiile unice și utilizarea; rezultatele sunt folosite pentru analiza statistică și agregată.</p>
+      <p>Locația aproximativă este derivată din adresa IP; GPS sau locația precisă nu sunt colectate și nu se solicită permisiunea de locație precisă.</p>
+      <p>Utilizatorii pot dezactiva personalizarea publicității sau pot reseta identificatorul publicitar din setările dispozitivului, de exemplu pe Android, prin <strong>Setări → Google → Anunțuri</strong>. Numele meniurilor pot varia în funcție de versiunea Android și de producătorul dispozitivului.</p>
+      <p>Pentru mai multe informații despre procesarea datelor și practicile de confidențialitate ale Google, accesați:<br /><a href="https://policies.google.com/privacy" rel="noopener noreferrer">https://policies.google.com/privacy</a></p><h2>Publicitate și servicii furnizate de terți</h2>
   <p>Serviciile de publicitate din aplicație pot fi furnizate de Google AdMob. În acest caz, Google poate prelucra anumite date privind dispozitivul și utilizarea pentru a afișa reclame, a măsura performanța, a preveni frauda și a asigura funcționarea în siguranță a serviciului.</p>
   <p>Pentru informații detaliate despre prelucrarea datelor și politicile de confidențialitate ale Google, consultați următoarea pagină:<br /><a href="https://policies.google.com/privacy" rel="noopener noreferrer">https://policies.google.com/privacy</a></p>
   <h2>Achiziții în aplicație</h2>
@@ -457,9 +658,29 @@
       <p>تنظیمات برنامه، ترجیحات مطالعه و سایر ترجیحات شخصی مشابه ممکن است در دستگاه کاربر ذخیره شوند. با این حال، داده‌های فنی و نحوهٔ استفاده که در بخش Firebase Analytics توضیح داده شده‌اند ممکن است برای تهیهٔ آمار به Google ارسال شوند.</p>
 
   <h2>Firebase Analytics و آمار استفاده</h2>
-      <p>این برنامه برای سنجش آمار استفاده، شناخت قابلیت‌های مورد استفاده و بهبود برنامه از Firebase Analytics ارائه‌شده توسط Google استفاده می‌کند. این سرویس ممکن است تعاملات درون‌برنامه‌ای، اطلاعات نشست، موقعیت مکانی تقریبی، اطلاعات دستگاه و سیستم‌عامل و شناسه‌هایی مانند شناسهٔ نمونهٔ برنامه یا شناسهٔ تبلیغاتی را پردازش کند.</p>
-      <p>ما این داده‌ها را به اطلاعات شناسایی مستقیم مانند نام، نشانی ایمیل یا شمارهٔ تلفن کاربر مرتبط نمی‌کنیم. پردازش داده‌ها از طریق Firebase Analytics تابع سیاست حفظ حریم خصوصی و شرایط خدمات Google است.</p>
-      <h2>تبلیغات و خدمات اشخاص ثالث</h2>
+      <p>این برنامه از Firebase Analytics ارائه‌شده توسط Google برای اندازه‌گیری میزان استفاده، درک ویژگی‌های استفاده شده و بهبود برنامه استفاده می‌کند.</p>
+      <h3>در حال حاضر به صورت خودکار جمع آوری می شود</h3>
+      <ul>
+        <li><strong>اطلاعات دستگاه:</strong> مدل دستگاه، سیستم عامل و نسخه، وضوح صفحه، و تنظیمات زبان یا منطقه ای.</li>
+        <li><strong>اطلاعات برنامه:</strong> نسخه برنامه، اولین زمان نصب و منبع نصب.</li>
+        <li><strong>معیارهای استفاده:</strong> تعداد جلسات، میانگین مدت جلسه، تعداد کاربران فعال روزانه، هفتگی و ماهانه، و اطلاعات نگهداری که نشان می‌دهد آیا برنامه پس از مدتی دوباره باز می‌شود یا خیر.</li>
+        <li><strong>موقعیت جغرافیایی تقریبی:</strong> موقعیت مکانی در سطح کشور یا شهر برگرفته از آدرس IP. GPS یا مکان دقیق جمع‌آوری نشده است و برنامه اجازه مکان دقیق را درخواست نمی‌کند.</li>
+        <li><strong>شناسه تبلیغات:</strong> چون Firebase Analytics همراه با Google AdMob استفاده می‌شود، شناسه تبلیغات Google ممکن است برای اهداف تبلیغاتی و شخصی‌سازی تبلیغات پردازش شود.</li>
+        <li><strong>رویدادهای استاندارد سیستم:</strong> رویدادهایی مانند اولین باز شدن (<code>first_open</code>)، به‌روزرسانی برنامه (<code>app_update</code>)، و حذف برنامه (<code>app_remove</code>).</li>
+      </ul>
+      <h3>رویدادهای برنامه ریزی شده Analytics — در حال حاضر فعال نیست</h3>
+      <p>اطلاعات زیر در حال حاضر به Firebase Analytics ارسال نشده است. این رویدادها ممکن است در نسخه بعدی اضافه شوند و به طور جداگانه برای توصیف محدوده برنامه ریزی شده از قبل فهرست شده اند:</p>
+      <ul>
+        <li><strong>ترجیح زبان:</strong> زبان انتخابی ترجمه قرآن و زبان منو.</li>
+        <li><strong>پرخواننده ترین سوره ها و آیات:</strong> آمار کل استفاده از سوره ها و آیات بیشتر خوانده می شود. این برای ایجاد نمایه خواندن شخصی نیست.</li>
+        <li><strong>استفاده از ویژگی جستجو:</strong> هر چند وقت یکبار و به چه روشی از ویژگی جستجو استفاده می شود. متن جستجو شامل نمی شود مگر اینکه این خط مشی قبل از شروع چنین مجموعه ای به روز شود.</li>
+        <li><strong>پیشرفت خواندن و میزان تکمیل:</strong> درصد پیشرفت خواندن قرآن که قبلاً در دستگاه ذخیره شده است نیز ممکن است به عنوان یک رویداد به Firebase Analytics ارسال شود.</li>
+      </ul>
+      <h3>انتقال داده و انتخاب های کاربر</h3>
+      <p>داده های تجزیه و تحلیل به سرورهای Google منتقل و پردازش می شوند. گوگل به عنوان یک پردازشگر داده شخص ثالث از طریق Firebase و Google Analytics عمل می کند. این برنامه نام، آدرس ایمیل یا شماره تلفن کاربر را جمع‌آوری نمی‌کند و ما داده‌های Analytics را با چنین اطلاعات شناسایی مستقیم مرتبط نمی‌کنیم. شناسه‌های فنی ممکن است برای اندازه‌گیری تأسیسات و کاربردهای منحصربه‌فرد استفاده شوند. نتایج برای تجزیه و تحلیل آماری و مجموع استفاده می شود.</p>
+      <p>موقعیت مکانی تقریبی از آدرس IP مشتق شده است. GPS یا مکان دقیق جمع‌آوری نشده است و مجوز مکان دقیق درخواست نمی‌شود.</p>
+      <p>کاربران می‌توانند شخصی‌سازی تبلیغات را غیرفعال کنند یا شناسه تبلیغات را از تنظیمات دستگاه بازنشانی کنند، برای مثال در Android از طریق <strong>تنظیمات → Google → تبلیغات</strong>. ممکن است نام منوها بسته به نسخه Android و سازنده دستگاه متفاوت باشد.</p>
+      <p>برای اطلاعات بیشتر در مورد پردازش داده‌ها و شیوه‌های حفظ حریم خصوصی Google، به این آدرس مراجعه کنید:<br /><a href="https://policies.google.com/privacy" rel="noopener noreferrer">https://policies.google.com/privacy</a></p><h2>تبلیغات و خدمات اشخاص ثالث</h2>
   <p>
     خدمات تبلیغاتی در برنامه ممکن است توسط Google AdMob ارائه شوند. در این صورت، Google ممکن است برخی داده‌های دستگاه و استفاده را به‌منظور نمایش تبلیغات، سنجش عملکرد، جلوگیری از تقلب و تضمین عملکرد ایمن خدمات پردازش کند.
   </p>
@@ -516,10 +737,30 @@
   <h2>Төхөөрөмжид хадгалагдах мэдээлэл</h2>
       <p>Аппын тохиргоо, унших сонголт болон түүнтэй төстэй хувийн тохиргоог хэрэглэгчийн төхөөрөмжид хадгалж болно. Гэхдээ доорх Firebase Analytics хэсэгт тайлбарласан техникийн болон ашиглалтын өгөгдлийг статистик гаргах зорилгоор Google-д дамжуулж болно.</p>
 
-  <h2>Firebase Analytics ба ашиглалтын статистик</h2>
-      <p>Апп нь ашиглалтын статистикийг хэмжих, ямар функц ашиглагдаж байгааг ойлгох, аппыг сайжруулах зорилгоор Google-ийн Firebase Analytics үйлчилгээг ашигладаг. Энэ үйлчилгээ нь апп доторх үйлдэл, сешний мэдээлэл, ойролцоо байршил, төхөөрөмж ба үйлдлийн системийн мэдээлэл, мөн аппын хувийн ID эсвэл зар сурталчилгааны ID зэрэг танигчийг боловсруулж болно.</p>
-      <p>Бид эдгээр өгөгдлийг хэрэглэгчийн нэр, цахим шуудангийн хаяг, утасны дугаар зэрэг шууд таних мэдээлэлтэй холбодоггүй. Firebase Analytics-аар хийгдэх өгөгдөл боловсруулалт нь Google-ийн нууцлалын бодлого болон үйлчилгээний нөхцөлд хамаарна.</p>
-      <h2>Зар сурталчилгаа ба гуравдагч талын үйлчилгээ</h2>
+  <h2>Firebase Analytics ба хэрэглээний статистик</h2>
+      <p>Аппликейшн нь ашиглалтыг хэмжих, ямар функцуудыг ашиглаж байгааг ойлгох, програмыг сайжруулахын тулд Google-ээс олгосон Firebase Analytics-ийг ашигладаг.</p>
+      <h3>Одоогоор автоматаар цуглуулсан</h3>
+      <ul>
+        <li><strong>Төхөөрөмжийн мэдээлэл:</strong> Төхөөрөмжийн загвар, үйлдлийн систем болон хувилбар, дэлгэцийн нягтрал, хэл эсвэл бүсийн тохиргоо.</li>
+        <li><strong>Програмын мэдээлэл:</strong> Програмын хувилбар, анхны суулгацын хугацаа болон суулгалтын эх сурвалж.</li>
+        <li><strong>Ашиглалтын хэмжүүр:</strong> Хэсгийн тоо, сессийн дундаж үргэлжлэх хугацаа, өдөр, долоо хоног, сарын идэвхтэй хэрэглэгчдийн тоо, тодорхой хугацааны дараа програм дахин нээгдсэн эсэхийг харуулдаг хадгалалтын мэдээлэл.</li>
+        <li><strong>Ойролцоогоор газарзүйн байршил:</strong> IP хаягаас авсан улс эсвэл хотын түвшний байршил. GPS эсвэл нарийн байршлыг цуглуулдаггүй бөгөөд програм нь байршлын тодорхой зөвшөөрөл хүсдэггүй.</li>
+        <li><strong>Зар сурталчилгааны танигч:</strong> Firebase Analytics-ийг Google AdMob-тэй хамт ашигладаг тул Google Advertising ID-г зар сурталчилгаа болон зар сурталчилгааны хувийн болгох зорилгоор боловсруулж болно.</li>
+        <li><strong>Стандарт системийн үйл явдлууд:</strong> Эхний нээлт (<code>first_open</code>), програмын шинэчлэлт (<code>app_update</code>) болон програмыг устгах (<code>app_remove</code>) зэрэг үйл явдлууд.</li>
+      </ul>
+      <h3>Төлөвлөсөн Analytics арга хэмжээнүүд — одоогоор идэвхгүй байна</h3>
+      <p>Дараах мэдээллийг одоогоор Firebase Analytics руу илгээгээгүй байна. Эдгээр үйл явдлыг ирээдүйн хувилбарт нэмж болох бөгөөд төлөвлөсөн хамрах хүрээг урьдчилан тайлбарлахын тулд тусад нь жагсаасан болно:</p>
+      <ul>
+        <li><strong>Хэлний сонголт:</strong> Сонгосон Коран орчуулгын хэл болон цэсийн хэл.</li>
+        <li><strong>Хамгийн их уншдаг судар, ишлэлүүд:</strong>Аль судлал, шүлгийг илүү олон удаа уншдаг тухай хэрэглээний статистик мэдээллийг нэгтгэх; Энэ нь хувийн унших профайл үүсгэх зорилготой биш юм.</li>
+        <li><strong>Хайлтын функцийг ашиглах:</strong> Хайлтын функцийг хэр олон удаа, ямар хэлбэрээр ашигладаг. Ийм цуглуулга эхлэхээс өмнө энэ удирдамж шинэчлэгдээгүй л бол хайлтын текстийг оруулаагүй болно.</li>
+        <li><strong>Уншлагын явц болон гүйцэтгэлийн хувь:</strong> Төхөөрөмж дээр аль хэдийн хадгалагдсан Коран судар унших явцын хувийг Firebase Analytics-д үйл явдал болгон илгээж болно.</li>
+      </ul>
+      <h3>Өгөгдөл дамжуулах болон хэрэглэгчийн сонголт</h3>
+      <p>Аналитик өгөгдлийг Google серверүүд рүү шилжүүлж, боловсруулдаг. Google нь Firebase болон Google Analytics-ээр дамжуулан гуравдагч талын өгөгдөл боловсруулагчийн үүрэг гүйцэтгэдэг. Аппликешн нь хэрэглэгчийн нэр, имэйл хаяг, утасны дугаарыг цуглуулдаггүй бөгөөд бид Analytics-ийн өгөгдлийг ийм шууд таних мэдээлэлтэй холбодоггүй. Техникийн танигчийг өвөрмөц суурилуулалт, ашиглалтыг хэмжихэд ашиглаж болно; үр дүнг статистик болон нэгтгэсэн шинжилгээнд ашигладаг.</p>
+      <p>Ойролцоогоор байршлыг IP хаягаас авсан; GPS эсвэл нарийн байршлыг цуглуулдаггүй бөгөөд байршлын тодорхой зөвшөөрөл хүсээгүй.</p>
+      <p>Хэрэглэгчид төхөөрөмжийн тохиргооноос зар сурталчилгааны хувийн тохиргоог идэвхгүй болгох эсвэл зар сурталчилгааны таниулбарыг дахин тохируулах боломжтой, жишээ нь Android дээрх <strong>Тохиргоо → Google → Зар</strong>-аар дамжуулан. Цэсийн нэр нь Android хувилбар болон төхөөрөмжийн үйлдвэрлэгчээс хамаарч өөр өөр байж болно.</p>
+      <p>Google-н өгөгдөл боловсруулах болон нууцлалын талаар нэмэлт мэдээлэл авахыг хүсвэл зочилно уу:<br /><a href="https://policies.google.com/privacy" rel="noopener noreferrer">https://policies.google.com/privacy</a></p><h2>Зар сурталчилгаа ба гуравдагч талын үйлчилгээ</h2>
   <p>
     Апп дахь зар сурталчилгааны үйлчилгээг Google AdMob үзүүлж болно. Энэ тохиолдолд Google нь зар сурталчилгаа үзүүлэх, гүйцэтгэлийг хэмжих, залилангаас урьдчилан сэргийлэх, үйлчилгээний аюулгүй ажиллагааг хангах зорилгоор төхөөрөмж болон ашиглалтын зарим өгөгдлийг боловсруулж болно.
   </p>
@@ -566,9 +807,29 @@
   <h2>Cihazda saxlanılan məlumatlar</h2>
       <p>Tətbiq parametrləri, oxuma seçimləri və oxşar şəxsi seçimlər istifadəçinin cihazında saxlanıla bilər. Lakin aşağıdakı Firebase Analytics bölməsində izah edilən texniki və istifadə məlumatları statistika hazırlamaq məqsədilə Google-a ötürülə bilər.</p>
   <h2>Firebase Analytics və istifadə statistikası</h2>
-      <p>Tətbiq istifadə statistikasını ölçmək, hansı funksiyaların istifadə edildiyini anlamaq və tətbiqi təkmilləşdirmək üçün Google tərəfindən təqdim edilən Firebase Analytics xidmətindən istifadə edir. Bu xidmət tətbiqdaxili qarşılıqlı əlaqələri, sessiya məlumatlarını, təxmini məkanı, cihaz və əməliyyat sistemi məlumatlarını, həmçinin tətbiq nümunəsi ID-si və ya reklam ID-si kimi identifikatorları emal edə bilər.</p>
-      <p>Biz bu məlumatları istifadəçinin adı, e-poçt ünvanı və ya telefon nömrəsi kimi birbaşa müəyyənedici məlumatlarla əlaqələndirmirik. Firebase Analytics vasitəsilə aparılan məlumat emalı Google-un məxfilik siyasətinə və xidmət şərtlərinə tabedir.</p>
-      <h2>Reklam və üçüncü tərəf xidmətləri</h2>
+      <p>Tətbiq istifadəsi ölçmək, hansı funksiyaların istifadə olunduğunu anlamaq və tətbiqi təkmilləşdirmək üçün Google tərəfindən təmin edilən Firebase Analitikasından istifadə edir.</p>
+      <h3>Hazırda avtomatik yığılır</h3>
+      <ul>
+        <li><strong>Cihaz haqqında məlumat:</strong> Cihaz modeli, əməliyyat sistemi və versiyası, ekran ayırdetmə qabiliyyəti, dil və ya regional parametrlər.</li>
+        <li><strong>Tətbiq məlumatı:</strong> Proqram versiyası, ilk quraşdırma vaxtı və quraşdırma mənbəyi.</li>
+        <li><strong>İstifadə göstəriciləri:</strong> Sessiyaların sayı, orta seans müddəti, gündəlik, həftəlik və aylıq aktiv istifadəçi sayıları və proqramın müəyyən müddətdən sonra yenidən açılıb-açılmadığını göstərən saxlama məlumatı.</li>
+        <li><strong>Təxmini coğrafi yer:</strong> IP ünvanından əldə edilən ölkə və ya şəhər səviyyəli yer. GPS və ya dəqiq məkan toplanmır və tətbiq dəqiq yer icazəsi tələb etmir.</li>
+        <li><strong>Reklam identifikatoru:</strong> Firebase Analytics Google AdMob ilə birlikdə istifadə edildiyi üçün Google Advertising ID reklam və reklamın fərdiləşdirilməsi məqsədləri üçün işlənə bilər.</li>
+        <li><strong>Standart sistem hadisələri:</strong> İlk açılış (<code>first_open</code>), proqram yeniləməsi (<code>app_update</code>) və proqramın silinməsi (<code>app_remove</code>) kimi hadisələr.</li>
+      </ul>
+      <h3>Planlaşdırılmış Analitika tədbirləri — hazırda aktiv deyil</h3>
+      <p>Aşağıdakı məlumat hazırda Firebase Analytics-ə göndərilməyib. Bu tədbirlər gələcək versiyada əlavə edilə bilər və əvvəlcədən planlaşdırılan əhatə dairəsini təsvir etmək üçün ayrıca siyahıya salınır:</p>
+      <ul>
+        <li><strong>Dil üstünlükləri:</strong> Seçilmiş Quran tərcümə dili və menyu dili.</li>
+        <li><strong>Ən çox oxunan surələr və ayələr:</strong> Hansı surə və ayələrin daha çox oxunduğu barədə ümumi istifadə statistikası; bu şəxsi oxu profili yaratmaq üçün nəzərdə tutulmayıb.</li>
+        <li><strong>Axtarış funksiyasından istifadə:</strong> Axtarış funksiyasından nə qədər tez-tez və hansı şəkildə istifadə olunur. Bu siyasət toplanma başlamazdan əvvəl yenilənməyincə axtarış mətni daxil edilmir.</li>
+        <li><strong>Oxu tərəqqisi və tamamlanma dərəcəsi:</strong> Artıq cihazda saxlanmış Quran oxuma tərəqqisinin faizi də hadisə kimi Firebase Analytics-ə göndərilə bilər.</li>
+      </ul>
+      <h3>Məlumat ötürülməsi və istifadəçi seçimləri</h3>
+      <p>Analytics datası Google serverlərinə ötürülür və emal olunur. Google Firebase və Google Analytics vasitəsilə üçüncü tərəf məlumat prosessoru kimi fəaliyyət göstərir. Tətbiq istifadəçinin adını, e-poçt ünvanını və ya telefon nömrəsini toplamır və biz Analitika məlumatlarını birbaşa identifikasiya edən bu cür məlumatlarla əlaqələndirmirik. Bununla belə, texniki identifikatorlar unikal qurğuların və istifadənin ölçülməsi üçün istifadə edilə bilər; nəticələr statistik və ümumi təhlil üçün istifadə olunur.</p>
+      <p>Təxmini yer IP ünvanından əldə edilir; GPS və ya dəqiq məkan toplanmır və heç bir dəqiq yer icazəsi tələb olunmur.</p>
+      <p>İstifadəçilər reklam fərdiləşdirməsini söndürə və ya reklam identifikatorunu cihaz parametrlərindən, məsələn, Android-də <strong>Parametrlər → Google → Reklamlar</strong> vasitəsilə sıfırlaya bilər. Menyu adları Android versiyasına və cihaz istehsalçısına görə dəyişə bilər.</p>
+      <p>Google-un məlumat emalı və məxfilik təcrübələri haqqında ətraflı məlumat üçün bura daxil olun:<br /><a href="https://policies.google.com/privacy" rel="noopener noreferrer">https://policies.google.com/privacy</a></p><h2>Reklam və üçüncü tərəf xidmətləri</h2>
   <p>Tətbiqdəki reklam xidmətləri Google AdMob tərəfindən təqdim oluna bilər. Bu halda Google reklamları göstərmək, performansı ölçmək, fırıldaqçılığın qarşısını almaq və xidmətin təhlükəsiz işləməsini təmin etmək məqsədilə müəyyən cihaz və istifadə məlumatlarını emal edə bilər.</p>
   <p>Google-un məlumatların emalı və məxfilik siyasətləri haqqında ətraflı məlumat üçün bu səhifəyə baxa bilərsiniz:<br /><a href="https://policies.google.com/privacy" rel="noopener noreferrer">https://policies.google.com/privacy</a></p>
   <h2>Tətbiqdaxili satınalmalar</h2>
@@ -595,9 +856,29 @@
   <h2>Qurilmada saqlanadigan ma’lumotlar</h2>
       <p>Ilova sozlamalari, o‘qish afzalliklari va shunga o‘xshash shaxsiy tanlovlar foydalanuvchi qurilmasida saqlanishi mumkin. Biroq quyidagi Firebase Analytics bo‘limida tavsiflangan texnik va foydalanish ma’lumotlari statistika tuzish uchun Google’ga uzatilishi mumkin.</p>
   <h2>Firebase Analytics va foydalanish statistikasi</h2>
-      <p>Ilova foydalanish statistikasini o‘lchash, qaysi funksiyalardan foydalanilishini tushunish va ilovani yaxshilash uchun Google taqdim etadigan Firebase Analytics xizmatidan foydalanadi. Ushbu xizmat ilova ichidagi o‘zaro aloqalar, seans ma’lumotlari, taxminiy joylashuv, qurilma va operatsion tizim ma’lumotlari hamda ilova nusxasi ID yoki reklama ID kabi identifikatorlarni qayta ishlashi mumkin.</p>
-      <p>Biz bu ma’lumotlarni foydalanuvchining ismi, elektron pochta manzili yoki telefon raqami kabi bevosita shaxsni aniqlovchi ma’lumotlar bilan bog‘lamaymiz. Firebase Analytics orqali amalga oshiriladigan ma’lumotlarni qayta ishlash Google maxfiylik siyosati va xizmat shartlariga bo‘ysunadi.</p>
-      <h2>Reklama va uchinchi tomon xizmatlari</h2>
+      <p>Ilova foydalanishni oʻlchash, qaysi funksiyalardan foydalanilganligini tushunish va ilovani yaxshilash uchun Google tomonidan taqdim etilgan Firebase Analytics’dan foydalanadi.</p>
+      <h3>Hozirda avtomatik yig'iladi</h3>
+      <ul>
+        <li><strong>Qurilma haqida ma'lumot:</strong> Qurilma modeli, operatsion tizimi va versiyasi, ekran ruxsati va til yoki mintaqaviy sozlamalar.</li>
+        <li><strong>Ilova haqida ma'lumot:</strong> Ilova versiyasi, birinchi o'rnatish vaqti va o'rnatish manbai.</li>
+        <li><strong>Foydalanish koʻrsatkichlari:</strong> Seanslar soni, oʻrtacha seans davomiyligi, kunlik, haftalik va oylik faol foydalanuvchilar soni va maʼlum vaqtdan soʻng ilova qayta ochilgan-ochilmasligini koʻrsatadigan saqlanish maʼlumotlari.</li>
+        <li><strong>Taxminiy geografik joylashuv:</strong> IP manzildan olingan mamlakat yoki shahar darajasidagi joylashuv. GPS yoki aniq joylashuv maʼlumotlari yigʻilmaydi va ilova aniq joylashuvga ruxsat soʻramaydi.</li>
+        <li><strong>Reklama identifikatori:</strong> Firebase Analytics Google AdMob bilan birgalikda ishlatilganligi sababli, Google Advertising ID reklama va reklamani shaxsiylashtirish maqsadlarida qayta ishlanishi mumkin.</li>
+        <li><strong>Standart tizim hodisalari:</strong> Birinchi ochilish (<code>first_open</code>), ilovani yangilash (<code>app_update</code>) va ilovani olib tashlash (<code>app_remove</code>) kabi hodisalar.</li>
+      </ul>
+      <h3>Rejalashtirilgan Analytics tadbirlari — hozirda faol emas</h3>
+      <p>Quyidagi ma'lumotlar hozirda Firebase Analytics-ga yuborilmagan. Ushbu tadbirlar kelgusi versiyada qo'shilishi mumkin va rejalashtirilgan ko'lamni oldindan tavsiflash uchun alohida sanab o'tilgan:</p>
+      <ul>
+        <li><strong>Til afzalligi:</strong> Tanlangan Qur'on tarjima tili va menyu tili.</li>
+        <li><strong>Eng ko'p o'qiladigan suralar va oyatlar:</strong> Qaysi suralar va oyatlar tez-tez o'qilishi haqida umumiy foydalanish statistikasi; bu shaxsiy oʻqish profilini yaratish uchun moʻljallanmagan.</li>
+        <li><strong>Qidiruv funksiyasidan foydalanish:</strong> Qidiruv funksiyasidan qanchalik tez-tez va qanday foydalaniladi. Qidiruv matni, agar yig‘ish boshlanishidan oldin bu siyosat yangilanmasa, kiritilmaydi.</li>
+        <li><strong>Oʻqish jarayoni va yakunlanish darajasi:</strong> Qurilmada saqlangan Qurʼon oʻqish jarayonining foizi ham hodisa sifatida Firebase Analytics’ga yuborilishi mumkin.</li>
+      </ul>
+      <h3>Ma'lumotlarni uzatish va foydalanuvchi tanlovlari</h3>
+      <p>Analytics ma'lumotlari Google serverlariga uzatiladi va qayta ishlanadi. Google Firebase va Google Analytics orqali uchinchi tomon maʼlumotlar protsessori sifatida ishlaydi. Ilova foydalanuvchi nomi, elektron pochta manzili yoki telefon raqamini to'plamaydi va biz Analytics ma'lumotlarini bunday to'g'ridan-to'g'ri identifikatsiya qiluvchi ma'lumotlar bilan bog'lamaymiz. Shunga qaramay, texnik identifikatorlar noyob o'rnatish va foydalanishni o'lchash uchun ishlatilishi mumkin; natijalar statistik va agregat tahlil uchun ishlatiladi.</p>
+      <p>Taxminiy joylashuv IP manzilidan olingan; GPS yoki aniq joylashuv maʼlumotlari yigʻilmaydi va aniq joylashuvga ruxsat soʻralmaydi.</p>
+      <p>Foydalanuvchilar reklamani shaxsiylashtirishni o‘chirib qo‘yishi yoki reklama identifikatorini qurilma sozlamalaridan tiklashi mumkin, masalan, Androidda <strong>Sozlamalar → Google → Reklamalar</strong> orqali. Menyu nomlari Android versiyasi va qurilma ishlab chiqaruvchisiga qarab farq qilishi mumkin.</p>
+      <p>Google ma'lumotlarini qayta ishlash va maxfiylik amaliyotlari haqida qo'shimcha ma'lumot olish uchun tashrif buyuring:<br /><a href="https://policies.google.com/privacy" rel="noopener noreferrer">https://policies.google.com/privacy</a></p><h2>Reklama va uchinchi tomon xizmatlari</h2>
   <p>Ilovadagi reklama xizmatlari Google AdMob tomonidan taqdim etilishi mumkin. Bunday holatda Google reklamalarni ko‘rsatish, samaradorlikni o‘lchash, firibgarlikning oldini olish va xizmatning xavfsiz ishlashini ta’minlash maqsadida qurilma va foydalanishga oid ayrim ma’lumotlarni qayta ishlashi mumkin.</p>
   <p>Google’ning ma’lumotlarni qayta ishlash va maxfiylik siyosatlari haqida batafsil ma’lumot olish uchun quyidagi sahifaga tashrif buyurishingiz mumkin:<br /><a href="https://policies.google.com/privacy" rel="noopener noreferrer">https://policies.google.com/privacy</a></p>
   <h2>Ilova ichidagi xaridlar</h2>
@@ -624,9 +905,29 @@
   <h2>Түзмөктө сакталган маалыматтар</h2>
       <p>Колдонмонун жөндөөлөрү, окуу тандоолору жана ушуга окшош жеке тандоолор колдонуучунун түзмөгүндө сакталышы мүмкүн. Бирок төмөнкү Firebase Analytics бөлүмүндө сүрөттөлгөн техникалык жана колдонуу маалыматтары статистика түзүү үчүн Google’га жөнөтүлүшү мүмкүн.</p>
   <h2>Firebase Analytics жана колдонуу статистикасы</h2>
-      <p>Колдонмо колдонуу статистикасын өлчөө, кайсы функциялар колдонуларын түшүнүү жана колдонмону жакшыртуу үчүн Google тарабынан берилген Firebase Analytics кызматын колдонот. Бул кызмат колдонмонун ичиндеги аракеттерди, сессия маалыматын, болжолдуу жайгашкан жерди, түзмөк жана операциялык тутум тууралуу маалыматты, ошондой эле колдонмо нускасынын ID же жарнама ID сыяктуу идентификаторлорду иштетиши мүмкүн.</p>
-      <p>Биз бул маалыматтарды колдонуучунун аты, электрондук почта дареги же телефон номери сыяктуу түздөн-түз аныктоочу маалыматтар менен байланыштырбайбыз. Firebase Analytics аркылуу маалыматтарды иштетүү Google’дун купуялык саясатына жана тейлөө шарттарына баш иет.</p>
-      <h2>Жарнама жана үчүнчү тараптын кызматтары</h2>
+      <p>Колдонмо колдонууну өлчөө, кайсы функциялар колдонулуп жатканын түшүнүү жана колдонмону жакшыртуу үчүн Google тарабынан берилген Firebase Analytics колдонот.</p>
+      <h3>Учурда автоматтык түрдө чогултулган</h3>
+      <ul>
+        <li><strong>Түзмөк маалыматы:</strong> Түзмөктүн модели, иштөө тутуму жана версиясы, экрандын дааналыгы жана тил же аймактык жөндөөлөр.</li>
+        <li><strong>Колдонмо маалыматы:</strong> Колдонмо версиясы, биринчи орнотуу убактысы жана орнотуу булагы.</li>
+        <li><strong>Колдонуу көрсөткүчтөрү:</strong> Сеанстардын саны, сеанстын орточо узактыгы, күнүмдүк, жумалык жана айлык жигердүү колдонуучулардын саны жана колдонмо бир нече убакыттан кийин кайра ачылып же ачылбаганын көрсөткөн сактоо маалыматы.</li>
+        <li><strong>Болжолдуу географиялык жайгашуу:</strong> IP даректен алынган өлкө же шаар деңгээлинде жайгашкан жер. GPS же так жайгашкан жер чогултулбайт жана колдонмо так жайгашкан жерди аныктоого уруксат сурабайт.</li>
+        <li><strong>Жарнама идентификатору:</strong> Firebase Analytics Google AdMob менен бирге колдонулгандыктан, Google Advertising ID жарнамалоо жана жарнамаларды жекелештирүү максатында иштетилиши мүмкүн.</li>
+        <li><strong>Стандарттык тутум окуялары:</strong> Биринчи ачылыш (<code>first_open</code>), колдонмону жаңыртуу (<code>app_update</code>) жана колдонмону алып салуу (<code>app_remove</code>) сыяктуу окуялар.</li>
+      </ul>
+      <h3>Пландалган Analytics окуялары — учурда жигердүү эмес</h3>
+      <p>Төмөнкү маалымат учурда Firebase Analyticsке жөнөтүлгөн эмес. Бул иш-чаралар келечектеги версияга кошулушу мүмкүн жана алдын ала пландаштырылган масштабды сүрөттөө үчүн өзүнчө тизмеленген:</p>
+      <ul>
+        <li><strong>Тил тандоосу:</strong> Тандалган Куран котормо тили жана меню тили.</li>
+        <li><strong>Эң көп окулган сүрөөлөр жана аяттар:</strong>Кайсы сүрөөлөр жана аяттар көп окулганы жөнүндө жалпы колдонуу статистикасы; бул жеке окуу профилин түзүү үчүн арналган эмес.</li>
+        <li><strong>Издөө функциясын колдонуу:</strong> Издөө функциясы канчалык көп жана кандай түрдө колдонулат. Бул саясат чогултуу башталганга чейин жаңыртылмайынча, издөө тексти камтылган эмес.</li>
+        <li><strong>Окуунун жүрүшү жана бүтүрүү ылдамдыгы:</strong> Түзмөктө сакталган Куран окуу процессинин пайызы дагы окуя катары Firebase Analyticsке жөнөтүлүшү мүмкүн.</li>
+      </ul>
+      <h3>Маалыматтарды өткөрүү жана колдонуучунун тандоолору</h3>
+      <p>Аналитика дайындары Google серверлерине өткөрүлүп берилет жана иштетилет. Google Firebase жана Google Analytics аркылуу үчүнчү тараптын маалымат иштетүүчүсү катары иштейт. Колдонмо колдонуучунун атын, электрондук почта дарегин же телефон номерин чогултпайт жана биз Analytics дайындарын мындай түздөн-түз аныктоочу маалымат менен байланыштырбайбыз. Техникалык идентификаторлор уникалдуу орнотууларды жана колдонууну өлчөө үчүн колдонулушу мүмкүн; натыйжалар статистикалык жана жалпы талдоо үчүн колдонулат.</p>
+      <p> Болжолдуу жайгашкан жери IP даректен алынган; GPS же так жайгашкан жер чогултулбайт жана так жайгашкан жерди аныктоого уруксат суралбайт.</p>
+      <p>Колдонуучулар жарнактарды жекелештирүүнү өчүрө алышат же жарнак идентификаторун түзмөктүн жөндөөлөрүнөн баштапкы абалга келтире алышат, мисалы Android'де <strong>Орнотуулар → Google → Жарнамалар</strong> аркылуу. Менюнун аталыштары Android версиясына жана түзмөктүн өндүрүүчүсүнө жараша өзгөрүшү мүмкүн.</p>
+      <p>Google'дун дайындарды иштетүү жана купуялык практикалары жөнүндө көбүрөөк маалымат алуу үчүн төмөнкү дарекке баш багыңыз:<br /><a href="https://policies.google.com/privacy" rel="noopener noreferrer">https://policies.google.com/privacy</a></p><h2>Жарнама жана үчүнчү тараптын кызматтары</h2>
   <p>Колдонмодогу жарнама кызматтары Google AdMob тарабынан көрсөтүлүшү мүмкүн. Мындай учурда Google жарнамаларды көрсөтүү, натыйжалуулукту өлчөө, алдамчылыктын алдын алуу жана кызматтын коопсуз иштешин камсыз кылуу максатында түзмөк жана колдонуу тууралуу айрым маалыматтарды иштетиши мүмкүн.</p>
   <p>Google'дун маалыматтарды иштетүү жана купуялык саясаттары жөнүндө кеңири маалымат алуу үчүн төмөнкү баракчаны караңыз:<br /><a href="https://policies.google.com/privacy" rel="noopener noreferrer">https://policies.google.com/privacy</a></p>
   <h2>Колдонмонун ичиндеги сатып алуулар</h2>
@@ -652,10 +953,30 @@
   <p>Uyğulamada qullanıcı esabı, azalıq, kiriş sisteması ya da profil yaratma hususiyeti yoqtır.</p>
   <h2>Cihazda saqlanğan malümatlar</h2>
       <p>Uyğulama ayarları, oquv tercihleri ve beñzer şahsiy tercihler qullanıcınıñ cihazında saqlana bilir. Lâkin aşağıdaki Firebase Analytics bölüminde tarif etilgen teknik ve qullanuv malümatları statistika azırlamaq içün Googleğa yollana bilir.</p>
-  <h2>Firebase Analytics ve qullanuv statistikası</h2>
-      <p>Uyğulama, qullanuv statistikasını ölçmek, angi hususiyetlerniñ qullanılğanını añlamaq ve uyğulamanı yahşılaştırmaq içün Google tarafından temin etilgen Firebase Analytics hızmetini qullana. Bu hızmet uyğulama içindeki areketlerni, seans malümatlarını, taqribiy yerleşimni, cihaz ve işletim sistemi malümatlarını, ayrıca uyğulama nushası ID-si ya da reklama ID-si kibi tanıtıcılarnı işley bilir.</p>
-      <p>Biz bu malümatlarnı qullanıcınıñ adı, e-poçta adresi ya da telefon nomerası kibi doğrudan kimlik malümatlarınen bağlamaymız. Firebase Analytics vastasınen yapılğan malümat işlevi Google-nıñ mahremiyet siyaseti ve hızmet şartlarına tabidir.</p>
-      <h2>Reklama ve üçünci taraf hızmetleri</h2>
+  <h2>Firebase analitikası ve qullanuv statistikası</h2>
+      <p>Qullanma qullanuvnı olçemek, nasıl funktsiyalar qullanılğanını añlamaq ve qullanmanı mukemmelleştirmek içyun Google tarafından berilgen Firebase Analytics qullana.</p>
+      <h3>Şimdi avtomatik şekilde toplana</h3>
+      <ul>
+        <li><strong>Qurılma aqqında malyumat:</strong> Quralnıñ modeli, ameliyat sisteması ve versiyası, ekrannıñ çeşiti, em de til ya da regional parametrleri.</li>
+        <li><strong>Qullanma aqqında malyumat:</strong> Qullanmanıñ versiyası, birinci erleştiryuv vaqtı ve erleştiryuv menbası.</li>
+        <li><strong>Qullanuv kostergiçi:</strong> Seanslarnıñ sayısı, seansnıñ orta devamlılığı, kundelik, aftalıq ve aylıq faal qullanıcılarnıñ sayısı ve bir devirden soñ qullanma kene açılğanını kostergen saqlav malyumatları.</li>
+        <li><strong>Tahminiy coğrafik erleşyuv:</strong> IP adresten alınğan memleket ya da şeer seviesindeki erleşyuv. GPS ya da doğru erleşyuv toplanmay, ve qullanma doğru erleşyuv ruhseti talap etmey.</li>
+        <li><strong>Reklama identifikatorı:</strong> Firebase Analytics Google AdMob ile beraber qullanılğanı içyun, Google Reklama ID reklama ve reklama-personalizatsiya maqsatlarında işlene bile.</li>
+        <li><strong>Standart sistema vaqiaları:</strong> Birinci açıluv (<code>first_open</code>), qullanma yañılanması (<code>app_update</code>), ve qullanma çıqarılma (<code>app_remove</code>) kibi vaqialar.</li>
+      </ul>
+      <h3>Planlaştırılğan Analitika vaqiaları — şimdi faal degil</h3>
+      <p>Aşağıdaki malyumat şimdi Firebase Analytics-ke yollanılmay. Bu vaqialar kelecek variantta qoşula bile ve evelden planlaştırılğan kolemni tariflemek içyun ayrıca qayd etile:</p>
+      <ul>
+        <li><strong>Til seçimi:</strong> Qurannıñ seçilgen tercime tili ve menyu tili.</li>
+        <li><strong>Eñ çoq oqulğan sure ve aetler:</strong> Qaysı sure ve aetlerniñ çoqça oqulğanı aqqında umumiy qullanuv statistikası; bu şahsiy oquv profilini yaratmaq içyun degil.</li>
+        <li><strong>Qıdıruv funktsiyasından faydalanuv:</strong> Qıdıruv funktsiyası ne qadar sıq ve nasıl şekilde qullanıla. Eger boyle toplav başlanmazdan evel bu siyaset yañılanmağan olsa, qıdıruv metni kirsetilmey.</li>
+        <li><strong>Oquvnıñ ilerilevi ve bitirilmesi:</strong> Quran oquvnıñ ilerileviniñ endi mahsulatta saqlanğan faizi de vaqia olaraq Firebase Analytics-ke yollana bile.</li>
+      </ul>
+      <h3>Malyumatnı beryuv ve qullanıcınıñ seçimleri</h3>
+      <p>Analitika malyumatları Google serverlerine berile ve işlene. Google Firebase ve Google Analytics vastasınen uçyunci taraf malyumat işleticisi olaraq çalışmaqta. Qullanma qullanıcınıñ adını, elektron poçta adresini ya da telefon raqamını toplamay, biz ise Analytics malyumatlarını boyle doğrudan-doğru tanıtqan malyumatnen bağlamaymız. Tehnikiy identifikatorlar, boyle olsa da, unikal montajlar ve qullanuvnı olçemek içyun qullanıla bile; neticeler statistik ve umumiy talil içyun qullanıla.</p>
+      <p>Tahminiy erleşyuv IP adresten alınğan; GPS ya da doğru erleşyuv toplanmay ve doğru erleşyuv ruhseti talap etilmey.</p>
+      <p>Qullanıcılar reklama personalizatsiyasını syondyurmek ya da reklama identifikatorını mahsulat parametrlerinden yañıdan qoymaq mumkyunler, meselya, Android-de <strong>Parametrler → Google → Reklama</strong> yardımınen. Menyuniñ adları Android versiyasına ve mahsulat istisalcısına kore deñişe bile.</p>
+      <p>Google malyumatnı işlemek ve mahfiylik aqqında daa çoq malyumatnı boyle adresten almaq mumkyun:<br /><a href="https://policies.google.com/privacy" rel="noopener noreferrer">https://policies.google.com/privacy</a></p><h2>Reklama ve üçünci taraf hızmetleri</h2>
   <p>Uyğulamadaki reklama hızmetleri Google AdMob tarafından teminlene bile. Bu alda Google reklamalarnı köstermek, neticelilikni ölçemek, dolandırıcılıqnıñ ögüni almaq ve hızmetniñ telükesiz çalışmasını teminlemek maqsadınen bazı cihaz ve qullanuv malümatlarını işley bile.</p>
   <p>Google'nıñ malümatlarnı işlev ve mahremiyet siyasetleri aqqında tafsilâtlı malümat içün şu saifeni közden keçire bilesiñiz:<br /><a href="https://policies.google.com/privacy" rel="noopener noreferrer">https://policies.google.com/privacy</a></p>
   <h2>Uyğulama içi satın aluvlar</h2>
@@ -682,9 +1003,29 @@
   <h2>Құрылғыда сақталатын мәліметтер</h2>
       <p>Қолданба параметрлері, оқу қалаулары және осыған ұқсас жеке қалаулар пайдаланушының құрылғысында сақталуы мүмкін. Алайда төмендегі Firebase Analytics бөлімінде сипатталған техникалық және пайдалану деректері статистика жасау үшін Google-ға берілуі мүмкін.</p>
   <h2>Firebase Analytics және пайдалану статистикасы</h2>
-      <p>Қолданба пайдалану статистикасын өлшеу, қандай функциялардың қолданылатынын түсіну және қолданбаны жақсарту үшін Google ұсынатын Firebase Analytics қызметін пайдаланады. Бұл қызмет қолданба ішіндегі әрекеттерді, сеанс ақпаратын, шамамен орналасқан жерді, құрылғы мен операциялық жүйе туралы ақпаратты, сондай-ақ қолданба данасының идентификаторы немесе жарнама идентификаторы сияқты идентификаторларды өңдеуі мүмкін.</p>
-      <p>Біз бұл деректерді пайдаланушының аты, электрондық пошта мекенжайы немесе телефон нөмірі сияқты тікелей сәйкестендіретін ақпаратпен байланыстырмаймыз. Firebase Analytics арқылы деректерді өңдеу Google құпиялық саясаты мен қызмет көрсету шарттарына бағынады.</p>
-      <h2>Жарнама және үшінші тарап қызметтері</h2>
+      <p>Қолдануды өлшеу, қандай мүмкіндіктер пайдаланылатынын түсіну және қолданбаны жақсарту үшін қолданба Google ұсынған Firebase Analytics пайдаланады.</p>
+      <h3>Қазір автоматты түрде жиналады</h3>
+      <ul>
+        <li><strong>Құрылғы туралы ақпарат:</strong> Құрылғы үлгісі, операциялық жүйе және нұсқасы, экран ажыратымдылығы және тіл немесе аймақтық параметрлер.</li>
+        <li><strong>Қолданба туралы ақпарат:</strong> Қолданба нұсқасы, бірінші орнату уақыты және орнату көзі.</li>
+        <li><strong>Пайдалану көрсеткіштері:</strong> Сеанстар саны, орташа сеанс ұзақтығы, күнделікті, апталық және ай сайынғы белсенді пайдаланушылар саны және қолданбаның белгілі бір уақыт кезеңінен кейін қайта ашылғанын немесе ашылғанын көрсететін сақтау ақпараты.</li>
+        <li><strong>Шамамен географиялық орын:</strong> IP мекенжайынан алынған ел немесе қала деңгейіндегі орын. GPS немесе нақты орын жиналмайды және қолданба нақты орынды анықтау рұқсатын сұрамайды.</li>
+        <li><strong>Жарнама идентификаторы:</strong> Firebase Analytics Google AdMob-пен бірге пайдаланылғандықтан, Google Advertising ID жарнама және жарнаманы жекелендіру мақсатында өңделуі мүмкін.</li>
+        <li><strong>Стандартты жүйе оқиғалары:</strong> Алғашқы ашу (<code>first_open</code>), қолданбаны жаңарту (<code>app_update</code>) және қолданбаны жою (<code>app_remove</code>) сияқты оқиғалар.</li>
+      </ul>
+      <h3>Жоспарланған Analytics оқиғалары — қазір белсенді емес</h3>
+      <p>Келесі ақпарат қазір Firebase Analytics қызметіне жіберілмейді. Бұл оқиғалар болашақ нұсқада қосылуы мүмкін және жоспарланған ауқымды алдын ала сипаттау үшін бөлек тізімделеді:</p>
+      <ul>
+        <li><strong>Тіл таңдауы:</strong> Таңдалған Құран аударма тілі және мәзір тілі.</li>
+        <li><strong>Ең көп оқылатын сүрелер мен аяттар:</strong>Қай сүрелер мен аяттардың жиі оқылатыны туралы жиынтық қолдану статистикасы; бұл жеке оқу профилін жасауға арналмаған.</li>
+        <li><strong>Іздеу мүмкіндігін пайдалану:</strong> Іздеу мүмкіндігі қаншалықты жиі және қандай түрде пайдаланылады. Бұл саясат жинақ басталмай тұрып жаңартылмайынша, іздеу мәтіні қосылмайды.</li>
+        <li><strong>Оқу барысы және аяқталу көрсеткіші:</strong> Құрылғыда бұрыннан сақталған Құран оқу үлгерімінің пайызы оқиға ретінде Firebase Analytics қызметіне де жіберіледі.</li>
+      </ul>
+      <h3>Деректерді тасымалдау және пайдаланушы таңдаулары</h3>
+      <p>Analytics деректері Google серверлеріне тасымалданады және өңделеді. Google Firebase және Google Analytics арқылы үшінші тарап деректер өңдеушісі ретінде әрекет етеді. Қолданба пайдаланушының атын, электрондық пошта мекенжайын немесе телефон нөмірін жинамайды және біз Analytics деректерін мұндай тікелей сәйкестендіретін ақпаратпен байланыстырмаймыз. Техникалық идентификаторлар бірегей қондырғылар мен пайдалануды өлшеу үшін пайдаланылуы мүмкін; нәтижелер статистикалық және жиынтық талдау үшін пайдаланылады.</p>
+      <p>Шамамен орын IP мекенжайынан алынған; GPS немесе нақты орын жиналмайды және нақты орынды анықтау рұқсаты сұралмайды.</p>
+      <p>Пайдаланушылар жарнаманы жекелендіруді өшіре алады немесе құрылғы параметрлерінен жарнама идентификаторын қалпына келтіре алады, мысалы, Android жүйесінде <strong>Параметрлер → Google → Жарнамалар</strong> арқылы. Мәзір атаулары Android нұсқасына және құрылғы өндірушісіне байланысты өзгеруі мүмкін.</p>
+      <p>Google деректерін өңдеу және құпиялылық тәжірибелері туралы қосымша ақпарат алу үшін мына сайтқа кіріңіз:<br /><a href="https://policies.google.com/privacy" rel="noopener noreferrer">https://policies.google.com/privacy</a></p><h2>Жарнама және үшінші тарап қызметтері</h2>
   <p>Қолданбадағы жарнама қызметтерін Google AdMob ұсынуы мүмкін. Мұндай жағдайда Google жарнамаларды көрсету, өнімділікті өлшеу, алаяқтықтың алдын алу және қызметтің қауіпсіз жұмыс істеуін қамтамасыз ету мақсатында құрылғы мен пайдалануға қатысты кейбір деректерді өңдеуі мүмкін.</p>
   <p>Google компаниясының деректерді өңдеу және құпиялық саясаттары туралы толық ақпаратты мына беттен көруге болады:<br /><a href="https://policies.google.com/privacy" rel="noopener noreferrer">https://policies.google.com/privacy</a></p>
   <h2>Қолданба ішіндегі сатып алулар</h2>
@@ -711,9 +1052,29 @@
       <h2>Oplysninger gemt på enheden</h2>
       <p>Appindstillinger, læsepræferencer og lignende personlige præferencer kan gemmes på brugerens enhed. De tekniske data og brugsdata, der beskrives i afsnittet om Firebase Analytics nedenfor, kan dog sendes til Google for at udarbejde statistik.</p>
       <h2>Firebase Analytics og brugsstatistik</h2>
-      <p>Appen bruger Firebase Analytics, som leveres af Google, til at måle brugsstatistik, forstå hvilke funktioner der bruges, og forbedre appen. Tjenesten kan behandle interaktioner i appen, sessionsoplysninger, omtrentlig placering, oplysninger om enheden og operativsystemet samt identifikatorer som et appinstans-id eller annonce-id.</p>
-      <p>Vi knytter ikke disse data til direkte identificerende oplysninger såsom brugerens navn, e-mailadresse eller telefonnummer. Databehandling via Firebase Analytics er underlagt Googles privatlivspolitik og servicevilkår.</p>
-      <h2>Annoncering og tredjepartstjenester</h2>
+      <p>Applikationen bruger Firebase Analytics, leveret af Google, til at måle brugen, forstå, hvilke funktioner der bruges, og forbedre applikationen.</p>
+      <h3>Opsamles i øjeblikket automatisk</h3>
+      <ul>
+        <li><strong>Enhedsoplysninger:</strong> Enhedsmodel, operativsystem og version, skærmopløsning og sprog eller regionale indstillinger.</li>
+        <li><strong>Applikationsoplysninger:</strong> Applikationsversion, første installationstidspunkt og installationskilde.</li>
+        <li><strong>Brugsmålinger:</strong> Antal sessioner, gennemsnitlig sessionsvarighed, dagligt, ugentligt og månedligt antal aktive brugere og opbevaringsoplysninger, der viser, om applikationen åbnes igen efter et stykke tid.</li>
+        <li><strong>Omtrentlig geografisk placering:</strong> Placering på lande- eller byniveau afledt af IP-adressen. GPS eller præcis placering indsamles ikke, og applikationen anmoder ikke om tilladelse til præcis placering.</li>
+        <li><strong>Annonce-id:</strong> Da Firebase Analytics bruges sammen med Google AdMob, kan Google-annoncerings-id'et blive behandlet til annoncering og annoncetilpasning.</li>
+        <li><strong>Standard systemhændelser:</strong> Begivenheder såsom første åbning (<code>first_open</code>), opdatering af applikation (<code>app_update</code>) og fjernelse af applikation (<code>app_remove</code>).</li>
+      </ul>
+      <h3>Planlagte Analytics-hændelser — ikke aktive i øjeblikket</h3>
+      <p>Følgende oplysninger sendes i øjeblikket ikke til Firebase Analytics. Disse begivenheder kan blive tilføjet i en fremtidig version og er opført separat for at beskrive det planlagte omfang på forhånd:</p>
+      <ul>
+        <li><strong>Sprogpræference:</strong> Det valgte koranoversættelsessprog og menusprog.</li>
+        <li><strong>Mest læste suraer og vers:</strong> Samlet brugsstatistik om, hvilke suraer og vers der læses hyppigst; dette er ikke beregnet til at oprette en personlig læseprofil.</li>
+        <li><strong>Brug af søgefunktionen:</strong> Hvor ofte og på hvilken måde søgefunktionen bruges. Søgetekst er ikke inkluderet, medmindre denne politik opdateres, før en sådan indsamling begynder.</li>
+        <li><strong>Læsefremskridt og fuldførelsesrate:</strong> Procentdelen af Koranlæsefremskridt, der allerede er gemt på enheden, kan også sendes til Firebase Analytics som en hændelse.</li>
+      </ul>
+      <h3>Dataoverførsel og brugervalg</h3>
+      <p>Analytics-data overføres til og behandles på Googles servere. Google fungerer som tredjeparts databehandler gennem Firebase og Google Analytics. Applikationen indsamler ikke en brugers navn, e-mailadresse eller telefonnummer, og vi forbinder ikke Analytics-data med sådanne direkte identificerende oplysninger. Tekniske identifikatorer kan ikke desto mindre bruges til at måle unikke installationer og brug; resultaterne bruges til statistisk og aggregeret analyse.</p>
+      <p>Omtrentlig placering er afledt af IP-adressen; GPS eller præcis placering indsamles ikke, og der anmodes ikke om tilladelse til præcis placering.</p>
+      <p>Brugere kan deaktivere annonceringstilpasning eller nulstille annoncerings-id'et fra enhedsindstillingerne, for eksempel på Android via <strong>Indstillinger → Google → Annoncer</strong>. Menunavne kan variere alt efter Android-version og enhedsproducent.</p>
+      <p>For flere oplysninger om Googles databehandling og privatlivspraksis, besøg:<br /><a href="https://policies.google.com/privacy" rel="noopener noreferrer">https://policies.google.com/privacy</a></p><h2>Annoncering og tredjepartstjenester</h2>
       <p>Annoncetjenester i appen kan leveres af Google AdMob. I så fald kan Google behandle visse enheds- og brugsdata for at vise annoncer, måle ydeevne, forhindre svindel og sikre, at tjenesten fungerer sikkert.</p>
       <p>Du kan finde detaljerede oplysninger om Googles databehandling og privatlivspolitikker på:<br /><a href="https://policies.google.com/privacy" rel="noopener noreferrer">https://policies.google.com/privacy</a></p>
       <h2>Køb i appen</h2>
@@ -739,10 +1100,30 @@
       <p>Pulogalamuyi ilibe maakaunti a ogwiritsa ntchito, umembala, njira yolowera kapena njira yopangira mbiri.</p>
       <h2>Zambiri zosungidwa pa chipangizo</h2>
       <p>Zokonda za pulogalamu, zokonda zowerenga ndi zokonda zina zofanana zitha kusungidwa pa chipangizo cha wogwiritsa ntchito. Komabe, deta yaukadaulo ndi yogwiritsira ntchito yofotokozedwa m’chigawo cha Firebase Analytics pansipa ikhoza kutumizidwa ku Google kuti apange ziwerengero.</p>
-      <h2>Firebase Analytics ndi ziwerengero zogwiritsa ntchito</h2>
-      <p>Pulogalamuyi imagwiritsa ntchito Firebase Analytics yoperekedwa ndi Google kuti iyeze ziwerengero zogwiritsa ntchito, kumvetsetsa zinthu zomwe zimagwiritsidwa ntchito ndi kukonza pulogalamuyi. Ntchitoyi ikhoza kukonza zochitika mkati mwa pulogalamu, zambiri za magawo, malo oyerekezeredwa, zambiri za chipangizo ndi makina ogwiritsira ntchito, komanso zizindikiritso monga ID ya pulogalamu kapena ID yotsatsa.</p>
-      <p>Sitimagwirizanitsa deta imeneyi ndi zambiri zomwe zingazindikiritse munthu mwachindunji, monga dzina, imelo kapena nambala ya foni ya wogwiritsa ntchito. Kukonzedwa kwa deta kudzera mu Firebase Analytics kumatsatira mfundo zachinsinsi ndi malamulo a ntchito a Google.</p>
-      <h2>Kutsatsa ndi ntchito za anthu ena</h2>
+      <h2>Firebase Analytics ndi ziwerengero zamagwiritsidwe</h2>
+      <p>Pulogalamuyi imagwiritsa ntchito Firebase Analytics, yoperekedwa ndi Google, kuyesa kagwiritsidwe ntchito, kumvetsetsa zomwe zimagwiritsidwa ntchito, komanso kukonza pulogalamuyo.</p>
+      <h3>Pakali pano zasonkhanitsidwa zokha</h3>
+      <ul>
+        <li><strong>Zidziwitso pachchipangizo:</strong> Mtundu wachipangizo, makina ogwiritsira ntchito ndi mtundu, mawonekedwe a zenera, ndi zochunira zachilankhulo kapena zigawo.</li>
+        <li><strong>Zidziwitso zamapulogalamu:</strong> Mtundu wa pulogalamu, nthawi yoyikira koyamba, ndi kochokera.</li>
+        <li><strong>Ziyerekezo za kagwiritsidwe ntchito:</strong> Chiwerengero cha magawo, avareji ya nthawi yagawo, ziwerengero za tsiku ndi tsiku, mlungu uliwonse ndi mwezi uliwonse, ndi mfundo zosunga zosonyeza ngati pulogalamuyo yatsegulidwanso pakapita nthawi.</li>
+        <li><strong>Chifupi ndi malo:</strong> Dziko- kapena malo amtundu wochokera ku adilesi ya IP. GPS kapena malo eni eni samasonkhanitsidwa, ndipo pulogalamuyo sipempha chilolezo chamalo enieni.</li>
+        <li><strong>Chizindikiritso cha zotsatsa:</strong> Chifukwa Firebase Analytics imagwiritsidwa ntchito limodzi ndi Google AdMob, ID ya Google Advertising ikhoza kusinthidwa kuti ipange zotsatsa komanso zotsatsa.</li>
+        <li><strong>Zochitika zanthawi zonse:</strong> Zochitika monga kutsegulidwa koyamba (<code>first_open</code>), kusintha kwa pulogalamu (<code>app_update</code>), ndi kuchotsa pulogalamu (<code>app_remove</code>).</li>
+      </ul>
+      <h3>Zochitika Zowerengera Zokonzekera — sizikugwira ntchito pano</h3>
+      <p>Zidziwitso zotsatirazi sizikutumizidwa pano ku Firebase Analytics. Zochitika izi zitha kuwonjezedwa mu mtundu wamtsogolo ndipo zandandalikidwa padera kuti zifotokoze zomwe zakonzedwa pasadakhale:</p>
+      <ul>
+        <li><strong>Chiyankhulo chokonda:</strong> Chiyankhulo chomasulira cha Korani chosankhidwa ndi chilankhulo cha menyu.</li>
+        <li><strong>Surah ndi aya zowerengedwa kwambiri:</strong> Gwirizanitsani ziwerengero zomwe surah ndi ma aya amawerengedwa mowirikiza; ichi sichinapangidwe kupanga mbiri yanu yowerengera.</li>
+        <li><strong>Kagwiritsidwe ntchito kakusaka:</strong> Kangati komanso m'njira zotani zomwe kusaka kumagwiritsidwa ntchito. Mawu osakira sakuphatikizidwa pokhapokha ngati lamuloli lisinthidwa kusonkhanitsa kotere kusanayambe.</li>
+        <li><strong>Mlingo wowerengera ndi kumaliza:</strong> Maperesenti a momwe kuwerenga kwa Korani kwasungidwa kale pachipangizochi kungatumizidwenso ku Firebase Analytics ngati chochitika.</li>
+      </ul>
+      <h3>Kusamutsa deta ndi zosankha za ogwiritsa ntchito</h3>
+      <p>Data ya analytics imasamutsidwa ndikusinthidwa pa maseva a Google. Google imagwira ntchito ngati purosesa ya data yachitatu kudzera pa Firebase ndi Google Analytics. Pulogalamuyi sitenga dzina la wogwiritsa ntchito, imelo adilesi, kapena nambala yafoni, ndipo sitiphatikiza data ya Analytics ndi chidziwitso chodziwikiratu. Zozindikiritsa zaukadaulo zitha kugwiritsidwa ntchito kuyeza makhazikitsidwe apadera ndi kagwiritsidwe ntchito; zotsatira zake zimagwiritsidwa ntchito pofufuza zowerengera komanso zophatikiza.</p>
+      <p>Malo oyandikira akuchokera ku adilesi ya IP; GPS kapena malo enieni sasonkhanitsidwa ndipo palibe chilolezo chamalo enieni chomwe chikufunsidwa.</p>
+      <p>Ogwiritsa atha kuyimitsa kusatsa makonda kapena kukonzanso chozindikiritsa chotsatsa kuchokera pazokonda pazida, mwachitsanzo pa Android kudzera pa <strong>Zochunira → Google → Ads</strong>. Mayina amndandanda amatha kusiyanasiyana malinga ndi mtundu wa Android komanso wopanga zida.</p>
+      <p>Kuti mumve zambiri za Google pakukonza deta ndi zinsinsi, pitani ku:<br /><a href="https://policies.google.com/privacy" rel="noopener noreferrer">https://policies.google.com/privacy</a></p><h2>Kutsatsa ndi ntchito za anthu ena</h2>
       <p>Ntchito zotsatsa mu pulogalamuyi zingaperekedwe ndi Google AdMob. Zikatero, Google ingagwiritse ntchito deta ina ya chipangizo ndi kagwiritsidwe ntchito kuti iwonetse zotsatsa, kuyeza momwe zikuyendera, kupewa chinyengo ndi kuonetsetsa kuti ntchitoyo ikuyenda motetezeka.</p>
       <p>Kuti mudziwe zambiri za momwe Google imagwiritsira ntchito deta ndi mfundo zake zachinsinsi, pitani pa:<br /><a href="https://policies.google.com/privacy" rel="noopener noreferrer">https://policies.google.com/privacy</a></p>
       <h2>Zogula mkati mwa pulogalamu</h2>
@@ -769,9 +1150,29 @@
       <h2>Інформація, що зберігається на пристрої</h2>
       <p>Налаштування застосунку, уподобання щодо читання та подібні особисті налаштування можуть зберігатися на пристрої користувача. Однак технічні дані й відомості про використання, описані нижче в розділі Firebase Analytics, можуть передаватися Google для формування статистики.</p>
       <h2>Firebase Analytics і статистика використання</h2>
-      <p>Застосунок використовує сервіс Firebase Analytics, наданий Google, щоб вимірювати статистику використання, розуміти, які функції використовуються, та покращувати застосунок. Сервіс може обробляти взаємодії в застосунку, інформацію про сеанси, приблизне місцезнаходження, відомості про пристрій і операційну систему, а також такі ідентифікатори, як ідентифікатор екземпляра застосунку або рекламний ідентифікатор.</p>
-      <p>Ми не пов’язуємо ці дані з інформацією, що безпосередньо ідентифікує користувача, як-от ім’я, адреса електронної пошти чи номер телефону. Обробка даних через Firebase Analytics регулюється політикою конфіденційності та умовами використання Google.</p>
-      <h2>Реклама та сторонні сервіси</h2>
+      <p>Програма використовує Firebase Analytics, надану Google, щоб вимірювати використання, розуміти, які функції використовуються, і вдосконалювати програму.</p>
+      <h3>Наразі збирається автоматично</h3>
+      <ul>
+        <li><strong>Інформація про пристрій:</strong> модель пристрою, операційна система та версія, роздільна здатність екрана та мовні або регіональні налаштування.</li>
+        <li><strong>Інформація про програму:</strong> версія програми, час першої інсталяції та джерело інсталяції.</li>
+        <li><strong>Показники використання:</strong> кількість сеансів, середня тривалість сеансу, щоденна, щотижнева та місячна кількість активних користувачів, а також інформація про утримання, яка показує, чи відкривається програма знову через певний період часу.</li>
+        <li><strong>Приблизне географічне місцезнаходження:</strong> місцезнаходження на рівні країни або міста, визначене за IP-адресою. GPS або точне місцезнаходження не збираються, і програма не запитує дозвіл на точне місцезнаходження.</li>
+        <li><strong>Рекламний ідентифікатор:</strong> оскільки Firebase Analytics використовується разом із Google AdMob, рекламний ідентифікатор Google може оброблятися для рекламних цілей і персоналізації реклами.</li>
+        <li><strong>Стандартні системні події:</strong> такі події, як перше відкриття (<code>first_open</code>), оновлення програми (<code>app_update</code>) і видалення програми (<code>app_remove</code>).</li>
+      </ul>
+      <h3>Заплановані події Analytics — наразі неактивні</h3>
+      <p>Ця інформація наразі не надсилається до Firebase Analytics. Ці події можуть бути додані в майбутній версії та перераховані окремо, щоб заздалегідь описати запланований обсяг:</p>
+      <ul>
+        <li><strong>Налаштування мови:</strong> вибрана мова перекладу Корану та мова меню.</li>
+        <li><strong>Сури та вірші, які найчастіше читають:</strong> сукупна статистика використання про те, які сури та вірші читають частіше; це не призначено для створення особистого профілю читання.</li>
+        <li><strong>Використання функції пошуку:</strong> як часто та в який спосіб використовується функція пошуку. Пошуковий текст не включається, якщо цю політику не буде оновлено до початку збирання.</li>
+        <li><strong>Прогрес читання та показник завершення:</strong> відсоток прогресу читання Корану, який уже зберігається на пристрої, також може надсилатися до Firebase Analytics як подія.</li>
+      </ul>
+      <h3>Передача даних і вибір користувача</h3>
+      <p>Дані Analytics передаються на сервери Google і обробляються на них. Google діє як сторонній обробник даних через Firebase і Google Analytics. Програма не збирає ім’я користувача, адресу електронної пошти чи номер телефону, і ми не пов’язуємо дані Analytics із такою безпосередньо ідентифікаційною інформацією. Проте технічні ідентифікатори можуть використовуватися для вимірювання унікальних установок і використання; результати використовуються для статистичного та агрегатного аналізу.</p>
+      <p>Приблизне місцезнаходження визначається за IP-адресою; GPS або точне місцезнаходження не збираються, і дозвіл на точне місцезнаходження не запитується.</p>
+      <p>Користувачі можуть вимкнути персоналізацію реклами або скинути рекламний ідентифікатор у налаштуваннях пристрою, наприклад, на Android через <strong>Налаштування → Google → Оголошення</strong>. Назви меню можуть відрізнятися залежно від версії Android і виробника пристрою.</p>
+      <p>Для отримання додаткової інформації про методи обробки даних і конфіденційності Google відвідайте:<br /><a href="https://policies.google.com/privacy" rel="noopener noreferrer">https://policies.google.com/privacy</a></p><h2>Реклама та сторонні сервіси</h2>
       <p>Рекламні послуги в застосунку можуть надаватися Google AdMob. У такому разі Google може обробляти певні дані про пристрій і використання для показу реклами, вимірювання ефективності, запобігання шахрайству та забезпечення безпечної роботи сервісу.</p>
       <p>Докладну інформацію про обробку даних і політику конфіденційності Google наведено на сторінці:<br /><a href="https://policies.google.com/privacy" rel="noopener noreferrer">https://policies.google.com/privacy</a></p>
       <h2>Покупки в застосунку</h2>
@@ -797,10 +1198,30 @@
       <p>ऐप में उपयोगकर्ता खाता, सदस्यता, लॉगिन प्रणाली या प्रोफ़ाइल बनाने की सुविधा नहीं है।</p>
       <h2>डिवाइस पर संग्रहीत जानकारी</h2>
       <p>ऐप की सेटिंग, पढ़ने की प्राथमिकताएँ और ऐसी ही व्यक्तिगत प्राथमिकताएँ उपयोगकर्ता के डिवाइस पर संग्रहीत की जा सकती हैं। हालांकि, नीचे दिए गए Firebase Analytics अनुभाग में बताए गए तकनीकी और उपयोग डेटा को आँकड़े तैयार करने के लिए Google को भेजा जा सकता है।</p>
-      <h2>Firebase Analytics और उपयोग के आँकड़े</h2>
-      <p>ऐप उपयोग के आँकड़े मापने, यह समझने कि किन सुविधाओं का उपयोग किया जाता है और ऐप को बेहतर बनाने के लिए Google द्वारा प्रदान की गई Firebase Analytics सेवा का उपयोग करता है। यह सेवा ऐप के अंदर की गतिविधियों, सत्र की जानकारी, अनुमानित स्थान, डिवाइस और ऑपरेटिंग सिस्टम की जानकारी तथा ऐप-इंस्टेंस आईडी या विज्ञापन आईडी जैसे पहचानकर्ताओं को संसाधित कर सकती है।</p>
-      <p>हम इस डेटा को उपयोगकर्ता के नाम, ईमेल पते या फ़ोन नंबर जैसी सीधे पहचान बताने वाली जानकारी से नहीं जोड़ते। Firebase Analytics के माध्यम से होने वाला डेटा संसाधन Google की गोपनीयता नीति और सेवा की शर्तों के अधीन है।</p>
-      <h2>विज्ञापन और तृतीय-पक्ष सेवाएँ</h2>
+      <h2>फ़ायरबेस एनालिटिक्स और उपयोग आँकड़े</h2>
+      <p>एप्लिकेशन उपयोग को मापने, उपयोग की जाने वाली सुविधाओं को समझने और एप्लिकेशन को बेहतर बनाने के लिए Google द्वारा प्रदान किए गए फायरबेस एनालिटिक्स का उपयोग करता है।</p>
+      <h3>वर्तमान में स्वचालित रूप से एकत्र किया गया</h3>
+      <ul>
+        <li><strong>डिवाइस जानकारी:</strong> डिवाइस मॉडल, ऑपरेटिंग सिस्टम और संस्करण, स्क्रीन रिज़ॉल्यूशन, और भाषा या क्षेत्रीय सेटिंग्स।</li>
+        <li><strong>एप्लिकेशन जानकारी:</strong> एप्लिकेशन संस्करण, पहला इंस्टॉलेशन समय और इंस्टॉलेशन स्रोत।</li>
+        <li><strong>उपयोग मेट्रिक्स:</strong> सत्रों की संख्या, औसत सत्र अवधि, दैनिक, साप्ताहिक और मासिक सक्रिय-उपयोगकर्ता गणना, और अवधारण जानकारी यह दर्शाती है कि क्या एप्लिकेशन एक निश्चित अवधि के बाद फिर से खोला गया है।</li>
+        <li><strong>अनुमानित भौगोलिक स्थान:</strong> आईपी पते से प्राप्त देश- या शहर-स्तरीय स्थान। जीपीएस या सटीक स्थान एकत्र नहीं किया जाता है, और एप्लिकेशन सटीक स्थान की अनुमति का अनुरोध नहीं करता है।</li>
+        <li><strong>विज्ञापन पहचानकर्ता:</strong> क्योंकि Firebase Analytics का उपयोग Google AdMob के साथ किया जाता है, Google विज्ञापन आईडी को विज्ञापन और विज्ञापन-वैयक्तिकरण उद्देश्यों के लिए संसाधित किया जा सकता है।</li>
+        <li><strong>मानक सिस्टम इवेंट:</strong> पहली बार खुलने (<code>first_open</code>), एप्लिकेशन अपडेट (<code>app_update</code>), और एप्लिकेशन निष्कासन (<code>app_remove</code>) जैसे इवेंट।</li>
+      </ul>
+      <h3>योजनाबद्ध एनालिटिक्स इवेंट - वर्तमान में सक्रिय नहीं</h3>
+      <p>निम्नलिखित जानकारी वर्तमान में फायरबेस एनालिटिक्स को नहीं भेजी गई है। इन घटनाओं को भविष्य के संस्करण में जोड़ा जा सकता है और पहले से नियोजित दायरे का वर्णन करने के लिए अलग से सूचीबद्ध किया गया है:</p>
+      <ul>
+        <li><strong>भाषा प्राथमिकता:</strong> चयनित कुरान अनुवाद भाषा और मेनू भाषा।</li>
+        <li><strong>सबसे ज्यादा पढ़े जाने वाले सूरह और छंद:</strong> कुल उपयोग के आँकड़े जिनके बारे में सूरह और छंद अधिक बार पढ़े जाते हैं; इसका उद्देश्य व्यक्तिगत पठन प्रोफ़ाइल बनाना नहीं है।</li>
+        <li><strong>खोज सुविधा का उपयोग:</strong> खोज सुविधा का उपयोग कितनी बार और किस तरीके से किया जाता है। खोज पाठ को तब तक शामिल नहीं किया जाता जब तक कि इस तरह के संग्रह शुरू होने से पहले इस नीति को अद्यतन नहीं किया जाता है।</li>
+        <li><strong>पढ़ने की प्रगति और पूर्णता दर:</strong> डिवाइस पर पहले से संग्रहीत कुरान पढ़ने की प्रगति का प्रतिशत भी एक घटना के रूप में फायरबेस एनालिटिक्स को भेजा जा सकता है।</li>
+      </ul>
+      <h3>डेटा स्थानांतरण और उपयोगकर्ता विकल्प</h3>
+      <p>एनालिटिक्स डेटा को Google सर्वर पर स्थानांतरित और संसाधित किया जाता है। Google Firebase और Google Analytics के माध्यम से तृतीय-पक्ष डेटा प्रोसेसर के रूप में कार्य करता है। एप्लिकेशन किसी उपयोगकर्ता का नाम, ईमेल पता, या टेलीफोन नंबर एकत्र नहीं करता है, और हम एनालिटिक्स डेटा को ऐसी सीधे पहचान वाली जानकारी से नहीं जोड़ते हैं। फिर भी तकनीकी पहचानकर्ताओं का उपयोग अद्वितीय स्थापनाओं और उपयोग को मापने के लिए किया जा सकता है; परिणाम सांख्यिकीय और समग्र विश्लेषण के लिए उपयोग किए जाते हैं।</p>
+      <p>अनुमानित स्थान आईपी पते से प्राप्त होता है; जीपीएस या सटीक स्थान एकत्र नहीं किया जाता है और किसी सटीक स्थान की अनुमति का अनुरोध नहीं किया जाता है।</p>
+      <p>उपयोगकर्ता विज्ञापन वैयक्तिकरण को अक्षम कर सकते हैं या डिवाइस सेटिंग्स से विज्ञापन पहचानकर्ता को रीसेट कर सकते हैं, उदाहरण के लिए एंड्रॉइड पर <strong>सेटिंग्स → Google → विज्ञापन</strong> के माध्यम से। एंड्रॉइड संस्करण और डिवाइस निर्माता के अनुसार मेनू नाम भिन्न हो सकते हैं।</p>
+      <p>Google की डेटा प्रोसेसिंग और गोपनीयता प्रथाओं के बारे में अधिक जानकारी के लिए, यहां जाएं:<br /><a href='https://policies.google.com/privacy' rel='noopener noreferrer'>https://policies.google.com/privacy</a></p><h2>विज्ञापन और तृतीय-पक्ष सेवाएँ</h2>
       <p>ऐप में विज्ञापन सेवाएँ Google AdMob द्वारा प्रदान की जा सकती हैं। ऐसी स्थिति में Google विज्ञापन दिखाने, प्रदर्शन मापने, धोखाधड़ी रोकने और सेवा के सुरक्षित संचालन को सुनिश्चित करने के लिए डिवाइस तथा उपयोग से संबंधित कुछ डेटा को संसाधित कर सकता है।</p>
       <p>Google की डेटा प्रोसेसिंग और गोपनीयता नीतियों के बारे में विस्तृत जानकारी के लिए देखें:<br /><a href="https://policies.google.com/privacy" rel="noopener noreferrer">https://policies.google.com/privacy</a></p>
       <h2>ऐप के अंदर खरीदारी</h2>
